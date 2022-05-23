@@ -1,0 +1,114 @@
+.header {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	padding: vw(40, 1920) 0;
+	&.fixed {
+		position: fixed;
+		background-color: $blue;
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+	}
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__logo {
+		position: relative;
+		z-index: 5;
+	}
+	&__menu {
+		margin-right: auto;
+		margin-left: 10%;
+		&_icon {
+			display: none;
+			@include mq("tablet-small", max) {
+				display: block;
+				position: relative;
+				z-index: 5;
+				width: 30px;
+				height: 18px;
+				cursor: pointer;
+				& span,
+				&:before,
+				&:after {
+					position: absolute;
+					left: 0;
+					width: 100%;
+					height: 10%;
+					background-color: $blue;
+					transition: all 0.3s ease 0s;
+				}
+				&:before,
+				&:after {
+					content: "";
+				}
+				&:before {
+					top: 0;
+				}
+				&:after {
+					bottom: 0;
+				}
+				& span {
+					top: 50%;
+					transform: scale(1) translate(0, -50%);
+				}
+				&.active span {
+					transform: scale(0) translate(0, -50%);
+				}
+				&.active:before {
+					top: 50%;
+					transform: rotate(-45deg) translate(0, -50%);
+				}
+				&.active:after {
+					bottom: 50%;
+					transform: rotate(45deg) translate(0, 50%);
+				}
+			}
+		}
+	}
+	&__btn {
+	}
+}
+.menu__list {
+	@include mq("tablet-small", max) {
+		position: fixed;
+		right: 0;
+		top: -100%;
+		width: 100%;
+		padding: 15% 3.9% 3.9% 3.9%;
+		opacity: 0;
+		background-color: rgba($color: $red, $alpha: 0.9);
+		transition: top 0.3s ease 0s, opacity 0.3s ease 0s;
+		overflow: auto;
+		&.active {
+			top: 0;
+			opacity: 1;
+		}
+	}
+	@include mq("tablet-small") {
+		display: flex;
+		align-items: center;
+	}
+}
+.menu__item {
+	@include mq("tablet-small", max) {
+		width: 100%;
+	}
+	&:not(:first-child) {
+		@include mq("tablet-small") {
+			margin-left: 15px;
+		}
+	}
+}
+.menu__link {
+	@include font-source-sans($fz, 1.5em, 500);
+	text-align: center;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 0.2s linear;
+	&:hover {
+		border-bottom: 2px solid $red;
+	}
+}

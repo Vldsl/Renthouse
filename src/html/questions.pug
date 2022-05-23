@@ -1,0 +1,39 @@
+section.questions
+	.container
+		.questions__inner
+			.questions__column
+				.questions__header.section-header
+					h2.section_title Have a&nbsp;Questions?
+					p.section_text You ask&nbsp;us anything about your house program and we&nbsp;will acompany with your house in&nbsp;future.
+				form.form#form(action='https://jsonplaceholder.typicode.com/posts' method="POST" enctype="multipart/form-data" novalidate)
+					.form__input_box
+						.form__field
+							input.form__input(type="text" id="name" name="username" value="" placeholder="Darth Vader" required)
+							.form__field_message
+							label.form__label(for="name") Name
+						.form__field
+							input.form__input(type="email" id="email" name="email" value="" placeholder="BlackCat@gmail.cat" required)
+							.form__field_message
+							label.form__label(for="email") E-mail
+					.form__field
+						textarea.form__textarea(name="text" value="" placeholder="What is your cat's name?")
+						label.form__label.form__label_textarea(for="question") Your question
+					button.form__btn.btn(type="submit") Consult
+			.questions__column
+				.spoiler
+					.spoiler__item
+						h3.spoiler__name How to&nbsp;get Started with&nbsp;Us?
+						.spoiler__content
+							p You can started with&nbsp;Us every time.
+							p We&nbsp;online every day.
+					.spoiler__item
+						h3.spoiler__name Can I&nbsp;choose my&nbsp;own House?
+						.spoiler__content
+							p You can started with&nbsp;Us every time.
+							p We&nbsp;online every day.
+					.spoiler__item
+						h3.spoiler__name When I&nbsp;can use for House?
+						.spoiler__content
+							p You can started with&nbsp;Us every time.
+							p We&nbsp;online every day.
+	img.questions__bg.section_img(src="./img/section-bg.jpg" alt="Questions background")

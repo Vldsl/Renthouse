@@ -1,0 +1,49 @@
+.about {
+	position: relative;
+	width: 100%;
+	padding: vw(190, 1920) 0 vw(200, 1920) 0;
+	@include mq("tablet", max) {
+		padding-top: 50%;
+		padding-bottom: vw(80, 1920);
+	}
+	&__inner {
+		text-align: left;
+		width: 50%;
+		margin-right: 0;
+		margin-left: auto;
+		@include mq("tablet", max) {
+			margin: 0;
+			width: 100%;
+		}
+	}
+	&__header {
+		margin-left: auto;
+		text-align: left;
+	}
+	&__suptitle {
+		margin-bottom: 5px;
+	}
+	&__title {
+		margin-bottom: 20px;
+	}
+	&__text {
+		margin-bottom: 50px;
+	}
+	&__btn {
+		@include mq("phone-wide", max) {
+			width: 100%;
+		}
+	}
+	&__img {
+		width: 55vw;
+		position: absolute;
+		top: -5vh;
+		left: 0;
+		z-index: -2;
+		@include mq("tablet", max) {
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}

@@ -1,0 +1,98 @@
+@import "vars";
+/*--------------------*/
+/*** Mixins ***/
+@import "mixins";
+/*--------------------*/
+/*** Null ***/
+@import "null";
+/*--------------------*/
+/*** Fonts ***/
+@import "fonts";
+/*--------------------*/
+/*** word ***/
+/*--------------------*/
+/*** word ***/
+/*--------------------*/
+/*** word ***/
+/*--------------------*/
+body {
+	font-family: $font-primary;
+	@include font-source-sans($fz, 1.1em, 400, $dark);
+	font-style: normal;
+	background-color: #fff;
+	text-align: left;
+	position: relative;
+}
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+/*** Container ***/
+.container {
+	width: 100%;
+	max-width: 1140px;
+	margin: auto;
+	padding: 0.1px 15px;
+}
+/*** Page ***/
+.page {
+	flex: 1 1 auto;
+}
+/*** Section header ***/
+.section_header {
+	color: inherit;
+	text-align: center;
+	// margin: 0 auto;
+	// width: 33.33333vw;
+}
+.section_suptitle {
+	@include font-source-sans(1.375rem, 1.5em, 500, $blue);
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+.section_title {
+	@include font-source-sans(2.375rem, 1.34em, 700);
+	@include mq("phone-wide", max) {
+		font-size: 1.75rem;
+	}
+}
+.section_text {
+	font-size: $fz;
+	line-height: 1.72em;
+}
+.section_img {
+}
+._ibg {
+	position: relative;
+	& img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.btn {
+	padding: 0.5em 2.2em;
+	border-radius: 10px;
+	@include font-source-sans($fz, 1.5em, 500, $white);
+	text-align: center;
+	background-color: $blue;
+	transition: background-color 0.2s linear;
+	&:hover {
+		color: $white;
+		background-color: $red;
+	}
+}
+@import "components/header";
+@import "components/intro";
+@import "components/about";
+@import "components/benefits";
+@import "components/properties";
+@import "components/steps";
+@import "components/questions";
+@import "components/footer";

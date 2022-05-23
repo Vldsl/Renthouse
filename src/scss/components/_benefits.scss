@@ -1,0 +1,128 @@
+/*** Benefits ***/
+.benefits {
+	width: 100%;
+	padding: vw(140, 1920) 0 0 0;
+	position: relative;
+	@include mq("tablet", max) {
+		padding-top: 10%;
+		padding-bottom: vw(80, 1920);
+	}
+}
+.benefits__header {
+	margin-bottom: 9%;
+}
+.benefits__suptitle {
+}
+.benefits__title {
+}
+.benefits__inner {
+	/* нужно прижать к низу родителя */
+	// position: absolute;
+	// bottom: 0;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.benefits__box {
+	width: 100vw;
+	margin: 0 0 50px 0;
+	@include mq("tablet") {
+		width: 40%;
+		margin: 0;
+	}
+}
+.benefits__item {
+	padding: 5px 0 5px 30px;
+	position: relative;
+	// box-shadow: 200px 0px 400px -11px rgba(4, 242, 51, 0.75) inset;
+	&:not(:last-child) {
+		margin: 0 0 50px 0;
+	}
+	&:before {
+		content: "";
+		display: inline-block;
+		width: 5px;
+		height: 100%;
+		background-color: $red;
+		border-radius: 10px;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	// &:after {
+	// 	position: absolute;
+	// 	left: 0;
+	// 	top: 0;
+	// 	content: "";
+	// 	display: block;
+	// 	height: 100%;
+	// 	width: 100%;
+	// 	background-color: rgba($color: $red, $alpha: 0.5);
+	// }
+}
+.benefit__box_title {
+	margin-bottom: 10px;
+	@include font-source-sans(1.75rem, 1.5em, 500);
+}
+.benefit__box_suptitle {
+	font-size: $fz;
+	line-height: 1.6875em;
+	color: $grey;
+}
+/*** Discover ***/
+.discover__box {
+	width: 100%;
+	margin-left: auto;
+	padding: 1.1rem 1.6rem;
+	box-shadow: 0 25px 55px -16px rgba(9, 45, 97, 0.2);
+	border-radius: 20px;
+	background-color: $white;
+	@include mq("tablet") {
+		width: 35%;
+	}
+	// @include mq("desktop") {
+	// 	width: 25%;
+	// }
+}
+.discover__title {
+	@include font-source-sans(1.25rem, 1.5em, 500);
+}
+.discover__subtitle {
+	@include font-source-sans(0.9375rem, 1.3em, $colour: $grey);
+	margin-bottom: 10px;
+}
+.discover__info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.discover__images {
+	& > *:not(:last-child) {
+		margin: 0 0.4375em 0 0;
+	}
+	img {
+		transition: 1s;
+	}
+	img:hover {
+		transform: scale(1.2);
+	}
+}
+.discover__link {
+	@include font-source-sans($fz, 1.5em, 500, $red);
+	&:hover {
+		text-decoration: underline;
+	}
+}
+.benefits__bg {
+	width: 100vw;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	@include mq("tablet") {
+		width: 55vw;
+	}
+	@include mq("phone-wide", max) {
+		display: none;
+	}
+}

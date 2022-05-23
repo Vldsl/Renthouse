@@ -1,0 +1,70 @@
+@mixin font-face($font-family, $ff-local, $url, $weight, $style: normal) {
+	@font-face {
+		font-family: "#{$font-family}";
+		src: url("#{$url}.eot");
+		src: local("#{$ff-local}"), local("#{$url}"), url("#{$url}.eot?#iefix") format("embedded-opentype"),
+			url("../fonts/#{$url}.woff2") format("woff2"), url("../fonts/#{$url}.woff") format("woff"),
+			url("#{$url}.ttf") format("truetype");
+		font-weight: #{$weight};
+		font-style: $style;
+		font-display: swap;
+	}
+}
+/* -------------------------------- */
+@mixin font-source-sans($size: false, $lh: false, $weight: 400, $colour: false) {
+	@if $size {
+		font-size: $size;
+	}
+	@if $lh {
+		line-height: $lh;
+	}
+	@if $weight {
+		font-weight: $weight;
+	}
+	@if $colour {
+		color: $colour;
+	}
+}
+/* -------------------------------- */
+$breakpoints: (
+	"phone": 20em,
+	"phone-wide": 30em,
+	"phablet": 37.5em,
+	"tablet-small": 48em,
+	"tablet": 61.9375em,
+	"tablet-wide": 64em,
+	"desktop": 78em,
+	"desktop-wide": 90em,
+);
+@mixin mq($width, $type: min) {
+	@if map_has_key($breakpoints, $width) {
+		$width: map_get($breakpoints, $width);
+		@if $type == max {
+			$width: $width;
+		}
+		@media only screen and (#{$type}-width: $width) {
+			@content;
+		}
+	}
+}
+/* -------------------------------- */
+@function vw($value, $base: 1440) {
+	@return calc($value / $base * 100vw);
+}
+// Куда их
+@function vmin($value, $base: 320) {
+	@return calc($value / $base * 100vmin);
+}
+/* -------------------------------- */
+@function calculate-width($col-span) {
+	@return calc(100% / $col-span);
+}
+
+.span-two {
+	width: calculate-width(2); // spans 2 columns, width = 50%
+}
+
+.span-three {
+	width: calculate-width(3); // spans 3 columns, width = 33.3%
+}
+/* -------------------------------- */
