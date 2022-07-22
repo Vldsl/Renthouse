@@ -1,86 +1,101 @@
 /*** Properties ***/
 .properties {
-	width: 100%;
-	padding: vw(80, 1920) 0 vw(150, 1920) 0;
+	margin: 0 0 rem(120) 0;
 	position: relative;
+
 	@include mq("tablet", max) {
-		padding-top: 10%;
+		padding: 10% 0 0 0;
 	}
+
+	&__container {}
+
+	&__header {
+		margin: 0 auto rem(80) auto;
+		width: 50%;
+	}
+
+	&__suptitle {}
+
+	&__title {}
+
+	&__text {}
+
 	&__inner {
-		margin: 0px -15px 50px;
 		display: flex;
-		flex-wrap: wrap;
-		/* выровнять блок по центру по вертикали */
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(50);
+		margin: 0 0 rem(70) 0;
 	}
-	&__column {
-		padding: 0 15px;
-		margin: 0 0 30px 0;
-		flex: 1 1 33.333%;
-		/* адаптивная сетка на флексах */
-		@include mq("tablet-small", max) {
-			flex: 1 1 100%;
-		}
+
+	&__item {}
+
+	&__link {
+		padding: rem(20) rem(50);
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
 	}
-	&__item {
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		background-color: $white;
-		box-shadow: 0px 18px 68px -16px rgba(21, 101, 215, 0.15);
-		border-radius: 20px;
-		overflow: hidden;
+
+	&__bg {
+		// width: 55vw;
+		position: absolute;
+		top: rem(-500);
+		left: 80vw;
+		z-index: -9;
 	}
+}
+
+.item-properties {
+	flex: 0 1 33.333%;
+	background-color: $white;
+	box-shadow: 0px 18px 68px -16px rgba(21, 101, 215, 0.15);
+	border-radius: 20px;
+	overflow: hidden;
+
 	&__image {
 		display: block;
 		padding: 75% 0 0 0;
+		margin: 0 0 rem(15) 0;
 	}
-	&__content {
-		padding: 0 1.6rem 1.6rem;
-		flex: 1 1 auto;
+
+	&__info {
+		padding: 0 rem(25) rem(25);
 	}
+
 	&__link {
 		color: inherit;
+
 		&:hover {
 			text-decoration: underline;
 		}
 	}
+
 	&__title {
-		@include font-source-sans(1.5rem, 1.5em, 500);
+		font-size: rem(24);
+		font-weight: 500;
 	}
+
 	&__subtitle {
+		margin: 0 0 rem(15) 0;
 		font-size: 1.25rem;
-		line-height: 1.5em;
 		color: $grey;
-		margin-bottom: 15px;
 	}
+
 	&__footer {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
+
 	&__price {
-		@include font-source-sans(1.625rem, 1.5em, 600, $blue);
+		font-size: rem(27);
+		font-weight: 600;
+		color: $blue;
 	}
+
 	&__view {
-		font-size: 20px;
-		line-height: 30px;
+		font-size: rem(20);
 		color: $grey;
 	}
-	&__btn {
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		// @include mq("phone-wide", max) {
-		// 	width: 100%;
-		// }
-	}
-	&__bg {
-		width: 55vw;
-		position: absolute;
-		top: -400px;
-		left: 45vw;
-		z-index: -9;
-	}
 }
-// .properties__header{margin-bottom: 10vh;}

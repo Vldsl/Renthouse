@@ -1,47 +1,43 @@
 footer.footer#footer
-	.container
-		.footer__inner
-			.footer__block
-				a.footer__logo(href="/")
-					img.logo-img(src="./img/Footer/footer-logo.svg" alt="Renthouse logo")
-				.social
-					a.social__item(href="#" target="_blank")
-						svg.social__icon
-							use(xlink:href="#facebook")
-					a.social__item(href="#" target="_blank")
-						svg.social__icon
-							use(xlink:href="#twitter")
-					a.social__item(href="#" target="_blank")
-						svg.social__icon
-							use(xlink:href="#instagram")
-			.footer__menu
-				.footer__column
-					h4.footer__title More
-					ul.footer__list
-						li
-							a.footer__link(href="./" target="_blank") FAQ
-						li
-							a.footer__link(href="./" target="_blank") Contact Us
-				.footer__column
-					h4.footer__title Service
-					ul.footer__list
-						li
-							a.footer__link(href="#questions") Consultant
-						li
-							a.footer__link(href="./") Houses
-						li
-							a.footer__link(href="./") Selections
-						li
-							a.footer__link(href="./") Gallery
-				.footer__column
-					h4.footer__title Company
-					ul.footer__list
-						li
-							a.footer__link(href="./#about") About Us
-						li
-							a.footer__link(href="./" target="_blank") Terms
-						li
-							a.footer__link(href="./" target="_blank") Privacy Policy
-						li
-							a.footer__link(href="./#properties") Properties
+	.footer__container
+		.footer__block
+			a.footer__logo.logo(href="/")
+				svg.logo__icon
+					use(xlink:href="#logo")
+			.footer__social.social
+				a.social__item(href="#" target="_blank")
+					svg.social__icon
+						use(xlink:href="#facebook")
+				a.social__item(href="#" target="_blank")
+					svg.social__icon
+						use(xlink:href="#twitter")
+				a.social__item(href="#" target="_blank")
+					svg.social__icon
+						use(xlink:href="#instagram")
+		ul.footer__list
+			h4.footer__title More
+			li
+				a.footer__link(href="./" target="_blank") FAQ
+			li
+				a.footer__link(href="./" target="_blank") Contact Us
+		ul.footer__list
+			h4.footer__title Service
+			li
+				a.footer__link(href="#questions") Consultant
+			li
+				a.footer__link(href="./") Houses
+			li
+				a.footer__link(href="./") Selections
+			li
+				a.footer__link(href="./") Gallery
+		ul.footer__list
+			h4.footer__title Company
+			li
+				a.footer__link(href="./#about") About Us
+			li
+				a.footer__link(href="./" target="_blank") Terms
+			li
+				a.footer__link(href="./" target="_blank") Privacy Policy
+			li
+				a.footer__link(href="./#properties") Properties
 	.footer__copy Renthouse &copy;&nbsp;2021. All rights reserved

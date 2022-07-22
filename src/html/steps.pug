@@ -1,28 +1,25 @@
 section.steps#steps
-	.container
-		.steps__header.section_header
-			h2.section_title 3&nbsp; <a class="intro__title_link" href="./"> Easy </a> steps to&nbsp;rent
-			p.section_text These typical steps for rent house of&nbsp;your dream.
+	.steps__container
+		.steps__header.page-header
+			h2.steps__title.page-title 3&nbsp; <span> Easy </span> steps to&nbsp;rent
+			p.steps__text.page-text These typical steps for rent house of&nbsp;your dream.
 		.steps__inner
 			.steps__column
-				article.steps__item
-					a.steps__link(href="#" target="_blank")
-						svg.steps__icon
-							use(xlink:href="#search")
-					h4.steps__title Find
-					p.steps__text Search your dreaming house
+				article.steps__item.item-steps
+					svg.item-steps__icon
+						use(xlink:href="#search")
+					h4.item-steps__title Find
+					p.item-steps__info Search your dreaming house
 			.steps__column
-				article.steps__item
-					a.steps__link(href="#" target="_blank")
-						svg.steps__icon
-							use(xlink:href="#key")
-					h4.steps__title Rent
-					p.steps__text Rent a&nbsp;house that choose and like
+				article.steps__item.item-steps
+					svg.item-steps__icon
+						use(xlink:href="#key")
+					h4.item-steps__title Rent
+					p.item-steps__info Rent a&nbsp;house that choose and like
 			.steps__column
-				article.steps__item
-					a.steps__link(href="#" target="_blank")
-						svg.steps__icon
-							use(xlink:href="#verified")
-					h4.steps__title Apply
-					p.steps__text Come to&nbsp;the house than you have rent
-	img.steps__bg.section_img(src="./img/section-bg.jpg" alt="Steps background")
+				article.steps__item.item-steps
+					svg.item-steps__icon
+						use(xlink:href="#verified")
+					h4.item-steps__title Apply
+					p.item-steps__info Come to&nbsp;the house than you have rent
+	img.steps__bg.page-img(src="./img/section-bg.jpg" alt="Steps background")

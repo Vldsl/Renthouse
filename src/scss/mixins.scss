@@ -1,70 +1,108 @@
-@mixin font-face($font-family, $ff-local, $url, $weight, $style: normal) {
-	@font-face {
-		font-family: "#{$font-family}";
-		src: url("#{$url}.eot");
-		src: local("#{$ff-local}"), local("#{$url}"), url("#{$url}.eot?#iefix") format("embedded-opentype"),
-			url("../fonts/#{$url}.woff2") format("woff2"), url("../fonts/#{$url}.woff") format("woff"),
-			url("#{$url}.ttf") format("truetype");
-		font-weight: #{$weight};
-		font-style: $style;
-		font-display: swap;
-	}
+/* -------------------------------- */
+//Percent
+@function percent($px, $from) {
+	$result: math.div($px, $from) * 100%;
+	@return $result;
 }
+
+//REM
+@function rem($px) {
+	$result: math.div($px, 16)+rem;
+	@return $result;
+}
+
+//EM
+@function em($px, $current: 16) {
+	$result: math.div($px, $current)+em;
+	@return $result;
+}
+
+//line height
+@function llh($px, $current: 16) {
+	$result: math.div($px, $current);
+	@return $result;
+}
+
+/* -------------------------------- */
+// @function vw($value, $base: 1920) {
+// 	$result: (math.div($value, $base) * 100vw);
+// 	@return $result;
+// }
+
+// @function vmin($value, $base: 320) {
+// 	$result: (math.div($value, $base) * 100vmin);
+// 	@return $result;
+// }
+
 /* -------------------------------- */
 @mixin font-source-sans($size: false, $lh: false, $weight: 400, $colour: false) {
 	@if $size {
 		font-size: $size;
 	}
+
 	@if $lh {
 		line-height: $lh;
 	}
+
 	@if $weight {
 		font-weight: $weight;
 	}
+
 	@if $colour {
 		color: $colour;
 	}
 }
+
 /* -------------------------------- */
+// "phone-wide": em(480),
+// "tablet-wide": em(1024),
 $breakpoints: (
-	"phone": 20em,
-	"phone-wide": 30em,
-	"phablet": 37.5em,
-	"tablet-small": 48em,
-	"tablet": 61.9375em,
-	"tablet-wide": 64em,
-	"desktop": 78em,
-	"desktop-wide": 90em,
+	"phone": em(320),
+	"phablet": em(600),
+	"tablet-small": em(768),
+	"tablet": em(991),
+	"desktop": em(1248),
+	"desktop-wide": em(1440),
 );
-@mixin mq($width, $type: min) {
-	@if map_has_key($breakpoints, $width) {
-		$width: map_get($breakpoints, $width);
-		@if $type == max {
-			$width: $width;
+
+@mixin mq($width, $type: min, $maxWidth: false) {
+	@if map-has-key($breakpoints, $width) {
+		$width: map-get($breakpoints, $width);
+		$maxWidth: map-get($breakpoints, $maxWidth);
+
+		@if $type ==min or $type ==max {
+			@media only screen and (#{$type}-width: $width) {
+				@content;
+			}
 		}
-		@media only screen and (#{$type}-width: $width) {
-			@content;
+
+		@else if $type ==range {
+			@media (min-width: $width) and (max-width: $maxWidth) {
+				@content;
+			}
+		}
+
+		@else {
+			@error 'Не указано значение для `#{$type}`';
 		}
 	}
-}
-/* -------------------------------- */
-@function vw($value, $base: 1440) {
-	@return calc($value / $base * 100vw);
-}
-// Куда их
-@function vmin($value, $base: 320) {
-	@return calc($value / $base * 100vmin);
-}
-/* -------------------------------- */
-@function calculate-width($col-span) {
-	@return calc(100% / $col-span);
+
+	@else {
+		@error 'Не указано значение для `#{$breakpoints}`';
+	}
 }
 
-.span-two {
-	width: calculate-width(2); // spans 2 columns, width = 50%
-}
+//========================================================================================================================================================
+// @mixin af($property,
+// 	$startSize,
+// 	$minSize,
+// 	$widthFrom: $maxWidthContainer,
+// 	$widthTo: $minWidthLayout) {
+// 	$minSizeValue: rem($minSize);
+// 	$widthTo: math.div($widthTo, 16);
+// 	$widthFrom: math.div($widthFrom, 16);
+// 	$addSize: math.div($startSize - $minSize, 16);
+// 	#{$property}: calc(#{$minSizeValue} + #{$addSize} * (((100vw - #{$widthTo + rem})) / ((#{$widthFrom - $widthTo}))));
+// }
 
-.span-three {
-	width: calculate-width(3); // spans 3 columns, width = 33.3%
-}
-/* -------------------------------- */
+//========================================================================================================================================================

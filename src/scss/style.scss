@@ -1,4 +1,9 @@
+@use "sass:math";
+@use "sass:map";
+
+/*** Vars ***/
 @import "vars";
+
 /*--------------------*/
 /*** Mixins ***/
 @import "mixins";
@@ -7,66 +12,105 @@
 @import "null";
 /*--------------------*/
 /*** Fonts ***/
-@import "fonts";
-/*--------------------*/
-/*** word ***/
-/*--------------------*/
-/*** word ***/
-/*--------------------*/
-/*** word ***/
+@import "fonts/fonts";
+@import "fonts/icons";
+
+
 /*--------------------*/
 body {
 	font-family: $font-primary;
-	@include font-source-sans($fz, 1.1em, 400, $dark);
+	@include font-source-sans(rem($fontSize), 1.5, 400, $primaryColor);
 	font-style: normal;
-	background-color: #fff;
 	text-align: left;
 	position: relative;
+
+	&.lock {
+		overflow: hidden;
+		touch-action: none;
+	}
 }
+
 .wrapper {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-}
-/*** Container ***/
-.container {
-	width: 100%;
-	max-width: 1140px;
-	margin: auto;
-	padding: 0.1px 15px;
-}
-/*** Page ***/
-.page {
-	flex: 1 1 auto;
-}
-/*** Section header ***/
-.section_header {
-	color: inherit;
-	text-align: center;
-	// margin: 0 auto;
-	// width: 33.33333vw;
-}
-.section_suptitle {
-	@include font-source-sans(1.375rem, 1.5em, 500, $blue);
-	letter-spacing: 0.12em;
-	text-transform: uppercase;
-}
-.section_title {
-	@include font-source-sans(2.375rem, 1.34em, 700);
-	@include mq("phone-wide", max) {
-		font-size: 1.75rem;
+
+	>main {
+		flex: 1 1 auto;
 	}
 }
-.section_text {
-	font-size: $fz;
-	line-height: 1.72em;
+
+/*** Container ***/
+[class*="__container"] {
+	width: 100%;
+	max-width: rem(1190);
+	margin: auto;
+	padding: 0 rem(15);
 }
-.section_img {
+
+/*** Page ***/
+.page {
+	&-header {
+		text-align: center;
+	}
+
+	&-suptitle {
+		font-size: rem(22);
+		font-weight: 500;
+		color: $blue;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+	}
+
+	&-title {
+		font-size: rem(38);
+		font-weight: 700;
+
+		& span {
+			color: $blue;
+		}
+
+		@include mq("phablet", max) {
+			font-size: rem(28);
+		}
+	}
+
+	&-text {
+		line-height: 1.72;
+	}
+
+	&-link {
+		// Доработать класс
+		padding: em(10, 18) em(40, 18);
+		border-radius: em(10);
+
+		font-weight: 500;
+		color: $white;
+		background-color: $blue;
+		transition: background-color 0.2s linear;
+		text-align: center;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $white;
+				background-color: $red;
+			}
+		}
+	}
+
+	&-img {}
 }
+
 ._ibg {
+	// Убрать этот класс
 	position: relative;
+
 	& img {
 		position: absolute;
 		top: 0;
@@ -76,18 +120,30 @@ body {
 		object-fit: cover;
 	}
 }
+
 .btn {
+	//Закончить с этим классом
 	padding: 0.5em 2.2em;
-	border-radius: 10px;
-	@include font-source-sans($fz, 1.5em, 500, $white);
-	text-align: center;
+	border-radius: em(10);
+
+	font-weight: 500;
+	color: $white;
 	background-color: $blue;
 	transition: background-color 0.2s linear;
-	&:hover {
-		color: $white;
-		background-color: $red;
+	text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: $white;
+			background-color: $red;
+		}
 	}
 }
+
 @import "components/header";
 @import "components/intro";
 @import "components/about";

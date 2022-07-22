@@ -1,73 +1,106 @@
 /*** Steps ***/
 .steps {
-	width: 100%;
 	position: relative;
-	padding: vw(60, 1920) 0 vw(120, 1920) 0;
+	margin: 0 0 rem(220) 0;
+
 	@include mq("tablet", max) {
-		padding-top: 10%;
+		padding: 10% 0 0 0;
 	}
-}
-.steps__header {
-	margin-bottom: 50px;
-}
-.steps__inner {
-	justify-content: space-around;
-	@include mq("tablet-small") {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0px -15px;
+
+	&__container {}
+
+	&__header {
+		margin: 0 0 rem(80) 0;
 	}
-}
-.steps__column {
-	flex: 0 1 25%;
-	padding: 0px 15px;
-	margin: 0 0 30px 0;
-	@include mq("tablet-small", max) {
-		flex: 0 1 50%;
-		&:not(:last-child) {
-			margin: 0 0 30px 0;
+
+	&__title {}
+
+	&__text {}
+
+	&__inner {
+		@include mq("phablet") {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: rem(30);
 		}
-		&:last-child {
-			flex: 1 1 100%;
+
+		@include mq("tablet") {
+			gap: rem(80);
 		}
 	}
+
+	&__column {
+		flex: 0 1 25%;
+
+		&:nth-of-type(2n) {
+			& .steps__item {
+				background-color: $blue;
+				color: $white;
+			}
+
+			& .item-steps__icon {
+				fill: $white;
+				color: $white;
+			}
+
+			& .item-steps__info {
+				color: $white;
+			}
+		}
+
+		@include mq("tablet", max) {
+			flex: 0 1 47%;
+
+			&:last-child {
+				flex: 1 1 100%;
+			}
+		}
+	}
+
+	&__item {
+		height: 100%;
+	}
+
+	&__bg {
+		width: 55vw;
+		position: absolute;
+		top: rem(-400);
+		right: 70vw;
+		z-index: -9;
+	}
 }
-.steps__item {
-	height: 100%;
+
+.item-steps {
+	padding: rem(80) rem(37) rem(60);
 	background-color: $white;
-	box-shadow: 0px 25px 68px -16px rgba(21, 101, 215, 0.15);
-	border-radius: 38px;
-	padding: 80px 15px 60px;
+	box-shadow: 0 25px 68px -16px rgba(21, 101, 215, 0.15);
+	border-radius: rem(38);
 	text-align: center;
-	& > *:not(:last-child) {
-		margin: 0 0 10px 0;
-	}
-}
-.steps__link {
-	display: inline-flex;
-	justify-content: center;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
-	width: 100px;
-	height: 100px;
-}
-.steps__icon {
-	display: block;
-	height: 80px;
-	fill: $blue;
-	color: $blue;
-	margin-bottom: 60px;
-}
-.steps__title {
-	@include font-source-sans(1.75rem, 1.5em, 500);
-}
-.steps__text {
-	@include font-source-sans($fz, 1.3em, $colour: $grey);
-	color: $grey;
-}
-.steps__bg {
-	width: 55vw;
-	position: absolute;
-	top: -400px;
-	right: 70vw;
-	z-index: -9;
+
+	@include mq("phablet", max) {
+		margin: 0 0 rem(30) 0;
+	}
+
+	&__icon {
+		display: block;
+		height: rem(80);
+		width: rem(80);
+		margin: 0 0 rem(70) 0;
+		fill: $blue;
+		color: $blue;
+	}
+
+	&__title {
+		font-size: rem(28);
+		font-weight: 500;
+	}
+
+	&__info {
+		line-height: 1.3;
+		color: $grey;
+	}
 }

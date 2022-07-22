@@ -1,114 +1,155 @@
 .header {
+	padding: rem(40) 0;
 	width: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 99;
-	padding: vw(40, 1920) 0;
+	z-index: 5;
+
 	&.fixed {
+		padding: rem(20) 0;
 		position: fixed;
-		background-color: $blue;
+		background-color: #fff;
 		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
 	}
-	&__inner {
-		display: flex;
+
+	&__container {
+		// min-height: 70px;
+		display: grid;
+		grid-template-columns: 0.3fr 1fr 0.3fr;
 		align-items: center;
 		justify-content: space-between;
+		gap: rem(40);
+
+		@include mq("tablet", max) {
+			grid-template-columns: repeat(2, auto);
+		}
 	}
-	&__logo {
-		position: relative;
-		z-index: 5;
-	}
+
+	&__logo {}
+
 	&__menu {
-		margin-right: auto;
-		margin-left: 10%;
-		&_icon {
-			display: none;
-			@include mq("tablet-small", max) {
-				display: block;
-				position: relative;
-				z-index: 5;
-				width: 30px;
-				height: 18px;
-				cursor: pointer;
-				& span,
-				&:before,
-				&:after {
-					position: absolute;
-					left: 0;
-					width: 100%;
-					height: 10%;
-					background-color: $blue;
-					transition: all 0.3s ease 0s;
-				}
-				&:before,
-				&:after {
-					content: "";
-				}
-				&:before {
-					top: 0;
-				}
-				&:after {
-					bottom: 0;
-				}
+		justify-self: start;
+	}
+
+	&__link {
+		// Доделать кнопку . На маленьких экранах переходит в выпадающее меню
+		justify-self: end;
+	}
+}
+
+.logo {
+	position: relative;
+	z-index: 5;
+
+	&__icon {
+		display: block;
+		width: rem(139);
+		height: rem(33);
+		fill: #4A4863;
+	}
+}
+
+.menu {
+	&__body {
+		@include mq("tablet", max) {
+			padding: 15% 3.9% 3.9% 3.9%;
+			width: 100%;
+			position: fixed;
+			right: 0;
+			top: -100%;
+			// z-index: 10;
+			opacity: 0;
+			background-color: rgba($color: $red, $alpha: 0.9);
+			transition: top 0.3s ease 0s, opacity 0.3s ease 0s;
+			overflow: auto;
+
+			&.active {
+				top: 0;
+				opacity: 1;
+			}
+		}
+	}
+
+	&__icon {
+		display: none;
+
+		@include mq("tablet", max) {
+			display: block;
+			position: relative;
+			z-index: 5;
+			width: rem(30);
+			height: rem(18);
+			cursor: pointer;
+
+			& span,
+			&:before,
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 10%;
+				background-color: $blue;
+				transition: all 0.3s ease 0s;
+			}
+
+			&:before {
+				top: 0;
+			}
+
+			&:after {
+				bottom: 0;
+			}
+
+			& span {
+				top: 50%;
+				transform: scale(1) translate(0, -50%);
+			}
+
+			&.active {
 				& span {
-					top: 50%;
-					transform: scale(1) translate(0, -50%);
-				}
-				&.active span {
 					transform: scale(0) translate(0, -50%);
 				}
-				&.active:before {
+
+				&:before {
 					top: 50%;
 					transform: rotate(-45deg) translate(0, -50%);
 				}
-				&.active:after {
+
+				&:after {
 					bottom: 50%;
 					transform: rotate(45deg) translate(0, 50%);
 				}
 			}
 		}
 	}
-	&__btn {
-	}
-}
-.menu__list {
-	@include mq("tablet-small", max) {
-		position: fixed;
-		right: 0;
-		top: -100%;
-		width: 100%;
-		padding: 15% 3.9% 3.9% 3.9%;
-		opacity: 0;
-		background-color: rgba($color: $red, $alpha: 0.9);
-		transition: top 0.3s ease 0s, opacity 0.3s ease 0s;
-		overflow: auto;
-		&.active {
-			top: 0;
-			opacity: 1;
+
+	&__list {
+		@include mq("tablet") {
+			display: flex;
+			align-items: center;
+			gap: rem(50);
 		}
 	}
-	@include mq("tablet-small") {
-		display: flex;
-		align-items: center;
-	}
-}
-.menu__item {
-	@include mq("tablet-small", max) {
-		width: 100%;
-	}
-	&:not(:first-child) {
-		@include mq("tablet-small") {
-			margin-left: 15px;
+
+	&__item {
+		@include mq("tablet", max) {
+			width: 100%;
 		}
 	}
-}
-.menu__link {
-	@include font-source-sans($fz, 1.5em, 500);
-	text-align: center;
-	border-bottom: 2px solid transparent;
-	transition: border-bottom 0.2s linear;
-	&:hover {
-		border-bottom: 2px solid $red;
+
+	&__link {
+		font-weight: 500;
+		color: #4A4863;
+		text-align: center;
+		border-bottom: 2px solid transparent;
+		transition: border-bottom 0.2s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				border-bottom: 2px solid $red;
+			}
+		}
 	}
 }

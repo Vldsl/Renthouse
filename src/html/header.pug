@@ -1,11 +1,12 @@
 header.header#header
-	.container
-		.header__inner
-			a.header__logo
-				img(src="./img/Logo.svg" alt="Renthouse logo")
-			nav.header__menu.menu
-				.header__menu_icon
-					span
+	.header__container
+		a.header__logo.logo(href="index.html") 
+			svg.logo__icon
+				use(xlink:href="#logo")
+		nav.header__menu.menu
+			button.menu__icon(type="button", aria-label="Open menu")
+				span
+			.menu__body
 				ul.menu__list
 					li.menu__item
 						a.menu__link(href="#") Gallery
@@ -15,4 +16,4 @@ header.header#header
 						a.menu__link(href="#benefits") Benefits
 					li.menu__item
 						a.menu__link(href="#properties") Properties
-			a.header__btn.btn(href="#questions") Consult
+		a.header__link.page-link(href="#questions") Consult

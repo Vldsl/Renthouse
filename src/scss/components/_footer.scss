@@ -1,80 +1,79 @@
 .footer {
-	width: 100%;
 	position: relative;
-	padding-bottom: vw(150, 1920);
-	&__inner {
+
+	&__container {
+		margin-bottom: rem(170);
 		display: flex;
-		flex-wrap: wrap;
 		justify-content: space-between;
-		// @include mq("tablet-small", max) {
-		// 	flex-direction: row-reverse;
-		// }
 	}
+
 	&__block {
 		@include mq("tablet-small") {
 			flex: 0 1 50%;
 		}
 	}
+
 	&__logo {
-		margin-bottom: 30px;
-	}
-	&__menu {
-		margin-top: 0.8rem;
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		flex: 1 1 100%;
-		@include mq("tablet-small") {
-			flex: 1 1 50%;
+		margin: 0 0 rem(30) 0;
+
+		.logo__icon {
+			width: rem(223);
+			height: rem(53);
 		}
 	}
-	&__column {
-		margin-bottom: 20px;
-	}
+
 	&__title {
-		margin-bottom: 30px;
-		@include font-source-sans(1.375rem, 1.5em, 500);
+		margin: 0 0 rem(30) 0;
+		font-size: rem(22);
+		font-weight: 500;
+		color: #4A4863;
 	}
+
 	&__list {
-		& > *:not(:last-child) {
-			margin-bottom: 10px;
+		li+li {
+			margin: rem(10) 0 0 0;
 		}
 	}
+
 	&__link {
-		line-height: 24px;
-		padding: 0px 30px 0px 0px;
+		font-size: rem(16);
+		color: #19144A;
+		padding: 0 rem(30) 0 0;
 	}
+
 	&__copy {
 		position: absolute;
-		bottom: 0;
+		bottom: 10px;
 		left: 50%;
 		transform: translateX(-50%);
-		@include font-source-sans(0.875rem, 1.5em, $colour: $grey);
+		font-size: rem(14);
+		color: $grey;
+
 	}
 }
+
 .social {
 	display: flex;
-}
-.social__item {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-right: 4px;
-	width: 40px;
-	height: 40px;
-	border: 1px solid #e8ecee;
-	background-color: #fff;
-	transition: background-color 0.1s linear;
-}
-.social__item:hover {
-	background-color: #e8ecee;
-}
-.social__item:hover .social__icon {
-	fill: $dark;
-}
-.social__icon {
-	display: block;
-	height: 24px;
-	fill: $white;
-	transition: fill 0.1s linear;
+
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 rem(4) 0 0;
+		width: rem(40);
+		height: rem(40);
+		background-color: #fff;
+		transition: background-color 0.1s linear;
+	}
+
+	&__item:hover {
+		background-color: #e8ecee;
+	}
+
+	&__icon {
+		display: block;
+		height: rem(24);
+		fill: #4A4863;
+		transition: fill 0.1s linear;
+	}
 }
