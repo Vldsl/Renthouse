@@ -54,10 +54,10 @@
 }
 
 /* -------------------------------- */
-// "phone-wide": em(480),
 // "tablet-wide": em(1024),
 $breakpoints: (
 	"phone": em(320),
+	"phone-wide": em(480),
 	"phablet": em(600),
 	"tablet-small": em(768),
 	"tablet": em(991),

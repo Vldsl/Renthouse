@@ -115,32 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 });
 
-
-
-// $(document).ready(function () {
-// 	$('.questions__name').click(function (event) {
-// 		if ($('.questions__spoiler').hasClass('one')) {
-// 			$('.questions__name').not($(this)).removeClass('active');
-// 			$('.questions__content').not($(this).next()).slideUp(300);
-// 		}
-// 		$(this).toggleClass('active').next().slideToggle(300);
-// 	});
-// });
-
-
-// $(document).ready(function() {
-// 	$('.footer__link').click(function(event) {
-// 		if($('.footer__list').hasClass('one')){}
-// 		$(this).toggleClass('active').next().slideToggle(300);
-// 	});
-// });
-
-// const links = document.querySelectorAll('.footer__link');
-// let index = 0;
-// const activeLinks = n => {
-
-// 	for (footer__link of links) {
-// 		footer__link.classList.remove('active');
-// 	}
-// 	links[n].classList.add('active');
-// }
+// Footer list
+const wrapperList = document.querySelectorAll('.footer__wrapper-list');
+if (wrapperList.length > 0) {
+	wrapperList.forEach(el => {
+		el.addEventListener('click', (e) => {
+			const self = e.currentTarget;
+			self.classList.toggle('_active');
+		})
+	})
+}

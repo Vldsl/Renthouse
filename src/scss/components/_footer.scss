@@ -3,8 +3,11 @@
 
 	&__container {
 		margin-bottom: rem(170);
-		display: flex;
-		justify-content: space-between;
+
+		@include mq("phablet") {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 
 	&__block {
@@ -22,6 +25,38 @@
 		}
 	}
 
+	&__wrapper-list {
+		@include mq("phablet", max) {
+			position: relative;
+			padding: rem(10);
+			cursor: pointer;
+
+			&:after {
+				content: "";
+				width: 0;
+				height: 0;
+				position: absolute;
+				right: rem(15);
+				top: rem(15);
+				border-width: 10px 0 10px 10px;
+				border-style: solid;
+				border-color: transparent #000;
+				transition: transform 0.3s ease 0s;
+			}
+
+			&._active {
+				& .footer__list {
+					opacity: 1;
+					display: block;
+				}
+
+				&:after {
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+
 	&__title {
 		margin: 0 0 rem(30) 0;
 		font-size: rem(22);
@@ -30,15 +65,28 @@
 	}
 
 	&__list {
-		li+li {
-			margin: rem(10) 0 0 0;
+		@include mq("phablet", max) {
+			padding: rem(20);
+			transition: opacity 0.3s ease 0s;
+			display: none;
+			background: #ff2775;
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+
+	&__item {
+		padding: 0 rem(10) 0 0;
+
+		&+& {
+			margin: rem(25) 0 0 0;
 		}
 	}
 
 	&__link {
+		padding: 0 rem(30) 0 0;
 		font-size: rem(16);
 		color: #19144A;
-		padding: 0 rem(30) 0 0;
 	}
 
 	&__copy {
@@ -64,10 +112,12 @@
 		height: rem(40);
 		background-color: #fff;
 		transition: background-color 0.1s linear;
-	}
 
-	&__item:hover {
-		background-color: #e8ecee;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #e8ecee;
+			}
+		}
 	}
 
 	&__icon {

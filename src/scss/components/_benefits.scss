@@ -1,12 +1,6 @@
-/*** Benefits ***/
 .benefits {
 	margin: 0 0 rem(160) 0;
 	position: relative;
-
-	@include mq("tablet", max) {
-		// padding-top: 10%;
-		// padding-bottom: vw(80, 1920);
-	}
 
 	&__container {}
 
@@ -19,27 +13,30 @@
 	&__title {}
 
 	&__inner {
-		/* нужно прижать к низу родителя */
-		// position: absolute;
-		// bottom: 0;
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
 		gap: rem(120);
+
+		@include mq("phablet", max) {
+			gap: rem(30);
+		}
 	}
 
-	&__body {}
+	&__body {
+		@include mq("tablet") {
+			width: 40%;
+			margin: 0;
+		}
+	}
+
+	&__discover-box {}
 
 	&__bg {
-		// width: 100vw;
 		position: absolute;
 		right: 0;
 		bottom: 0;
 		z-index: -1;
-
-		@include mq("tablet") {
-			// width: 55vw;
-		}
 
 		@include mq("phablet", max) {
 			display: none;
@@ -47,23 +44,10 @@
 	}
 }
 
-.body-benefits {
-	// width: 100vw;
-	// margin: 0 0 rem(50) 0;
-
-	@include mq("tablet") {
-		width: 40%;
-		margin: 0;
-	}
-
-	&__item {}
-}
-
 .item-benefits {
 	padding: rem(5) 0 rem(5) rem(30);
 	position: relative;
 
-	// box-shadow: 200px 0px 400px -11px rgba(4, 242, 51, 0.75) inset;
 	&:not(:last-child) {
 		margin: 0 0 rem(50) 0;
 	}
@@ -80,17 +64,6 @@
 		top: 0;
 	}
 
-	// &:after {
-	// 	position: absolute;
-	// 	left: 0;
-	// 	top: 0;
-	// 	content: "";
-	// 	display: block;
-	// 	height: 100%;
-	// 	width: 100%;
-	// 	background-color: rgba($color: $red, $alpha: 0.5);
-	// }
-
 	&__title {
 		margin: 0 0 rem(10) 0;
 		font-size: rem(28);
@@ -103,10 +76,8 @@
 	}
 }
 
-/*** Discover ***/
 .discover-box {
-	// width: 100%;
-	// margin: 0 0 0 auto;
+	width: 100%;
 	padding: rem(18) rem(25);
 	box-shadow: 0 25px 55px -16px rgba(9, 45, 97, 0.2);
 	border-radius: rem(20);
@@ -116,12 +87,16 @@
 		width: 35%;
 	}
 
-
 	&__title {
 		width: 50%;
 		margin: 0 0 rem(10) 0;
 		font-size: rem(20);
 		font-weight: 500;
+
+		@include mq("phablet", max) {
+			width: 100%;
+			margin: 0 0 rem(20) 0;
+		}
 	}
 
 	&__subtitle {
@@ -135,6 +110,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		@include mq("phablet", max) {
+			flex-direction: column;
+			align-items: start;
+			gap: rem(20);
+		}
 	}
 
 	&__images {
@@ -143,21 +124,17 @@
 		}
 	}
 
-	&__img {
-		// transition: 1s;
-
-		&:hover {
-			// transform: scale(1.2);
-		}
-	}
+	&__img {}
 
 
 	&__link {
 		font-weight: 500;
 		color: $red;
 
-		&:hover {
-			text-decoration: underline;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }

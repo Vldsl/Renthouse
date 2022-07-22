@@ -50,7 +50,6 @@ body {
 	padding: 0 rem(15);
 }
 
-/*** Page ***/
 .page {
 	&-header {
 		text-align: center;
@@ -82,10 +81,8 @@ body {
 	}
 
 	&-link {
-		// Доработать класс
 		padding: em(10, 18) em(40, 18);
 		border-radius: em(10);
-
 		font-weight: 500;
 		color: $white;
 		background-color: $blue;
@@ -105,43 +102,6 @@ body {
 	}
 
 	&-img {}
-}
-
-._ibg {
-	// Убрать этот класс
-	position: relative;
-
-	& img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-}
-
-.btn {
-	//Закончить с этим классом
-	padding: 0.5em 2.2em;
-	border-radius: em(10);
-
-	font-weight: 500;
-	color: $white;
-	background-color: $blue;
-	transition: background-color 0.2s linear;
-	text-align: center;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-
-	@media (any-hover: hover) {
-		&:hover {
-			color: $white;
-			background-color: $red;
-		}
-	}
 }
 
 @import "components/header";

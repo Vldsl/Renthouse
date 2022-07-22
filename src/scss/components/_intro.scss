@@ -1,20 +1,21 @@
 .intro {
+	margin: 0 0 rem(100) 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	position: relative;
 
+
 	@include mq("desktop-wide") {
-		padding: rem(265) 0 rem(155) 0;
+		padding: rem(265) 0 rem(55) 0;
 	}
 
 	@include mq("tablet", range, "desktop-wide") {
-		// height: 100vh;
-		padding: rem(150) 0;
+		padding: rem(50) 0;
 	}
 
 	@include mq("tablet", max) {
-		padding: rem(100) 0;
+		padding: rem(100) 0 0 0;
 	}
 
 	&__container {}
@@ -40,11 +41,15 @@
 		}
 	}
 
-	&__row {
+	&__control {
 		display: flex;
 		align-items: center;
 		gap: rem(40);
 		transition: color 0.3s ease-in-out;
+
+		@include mq("phone-wide", max) {
+			flex-direction: column;
+		}
 	}
 
 	&__link {}
@@ -54,7 +59,6 @@
 	&__search-form {}
 
 	&__img {
-		//  При размерах экрана меньше 1440 задавать ширину
 		position: absolute;
 		left: 45vw;
 		z-index: -1;
@@ -65,6 +69,10 @@
 
 		@include mq("tablet-small") {
 			top: -23vh;
+		}
+
+		@include mq("phablet", max) {
+			display: none;
 		}
 	}
 }
@@ -78,16 +86,20 @@
 		font-size: 2.5rem;
 	}
 
-	&:hover .intro__title_link {
-		text-decoration: underline;
-		transition: color 0.2s linear;
+	@media (any-hover: hover) {
+		&:hover .intro__title_link {
+			text-decoration: underline;
+			transition: color 0.2s linear;
+		}
 	}
 
 	&__link {
 		color: $blue;
 
-		&:hover {
-			color: $red;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+			}
 		}
 	}
 }
@@ -97,8 +109,10 @@
 	align-items: center;
 	transition: color 0.3s ease-in-out;
 
-	&:hover {
-		color: $blue;
+	@media (any-hover: hover) {
+		&:hover {
+			color: $blue;
+		}
 	}
 
 	&__icon {
@@ -202,8 +216,10 @@
 		font-family: inherit;
 		cursor: pointer;
 
-		&:hover {
-			color: $dark;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $dark;
+			}
 		}
 
 		option {

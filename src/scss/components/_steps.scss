@@ -1,10 +1,10 @@
-/*** Steps ***/
 .steps {
 	position: relative;
 	margin: 0 0 rem(220) 0;
 
 	@include mq("tablet", max) {
-		padding: 10% 0 0 0;
+		margin: 0 0 rem(100) 0;
+
 	}
 
 	&__container {}

@@ -14,7 +14,7 @@
 	}
 
 	&__container {
-		// min-height: 70px;
+		min-height: rem(70);
 		display: grid;
 		grid-template-columns: 0.3fr 1fr 0.3fr;
 		align-items: center;
@@ -33,7 +33,6 @@
 	}
 
 	&__link {
-		// Доделать кнопку . На маленьких экранах переходит в выпадающее меню
 		justify-self: end;
 	}
 }
@@ -58,7 +57,6 @@
 			position: fixed;
 			right: 0;
 			top: -100%;
-			// z-index: 10;
 			opacity: 0;
 			background-color: rgba($color: $red, $alpha: 0.9);
 			transition: top 0.3s ease 0s, opacity 0.3s ease 0s;
@@ -135,6 +133,7 @@
 
 	&__item {
 		@include mq("tablet", max) {
+			padding: rem(10) 0 rem(10) 0;
 			width: 100%;
 		}
 	}

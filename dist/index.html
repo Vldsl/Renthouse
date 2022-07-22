@@ -1,337 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head></head>
-  <head></head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
-  <meta name="theme-color" content="#111111">
-  <link rel="shortcut icon" href="./img/favicon.ico">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Renthouse </title>
-  <body style="background-color: #fff;">
-    <svg style="display: none;">
-      <symbol id="facebook" viewBox="0 0 24 24">
-        <g>
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12.067C0 18.033 4.333 22.994 10 24V15.333H7V12H10V9.333C10 6.333 11.933 4.667 14.667 4.667C15.533 4.667 16.467 4.8 17.333 4.933V8H15.8C14.333 8 14 8.733 14 9.667V12H17.2L16.667 15.333H14V24C19.667 22.994 24 18.034 24 12.067C24 5.43 18.6 0 12 0C5.4 0 0 5.43 0 12.067Z"></path>
-        </g>
-      </symbol>
-      <symbol id="twitter" viewBox="0 0 24 24">
-        <g>
-          <path d="M8.59247 22.085C16.5267 22.085 20.865 15.5104 20.865 9.81241C20.865 9.62457 20.865 9.43672 20.8561 9.25782C21.6969 8.64956 22.4304 7.88924 23.0118 7.02157C22.2426 7.36148 21.4107 7.59405 20.5341 7.70139C21.4286 7.16469 22.1084 6.32386 22.4304 5.31308C21.5985 5.80505 20.6772 6.16285 19.6932 6.35964C18.9061 5.51881 17.7879 5 16.5446 5C14.1652 5 12.2331 6.93212 12.2331 9.31149C12.2331 9.6514 12.2689 9.98237 12.3494 10.2954C8.76243 10.1165 5.58695 8.3991 3.45804 5.78716C3.09129 6.42226 2.87661 7.16469 2.87661 7.95185C2.87661 9.44567 3.63694 10.7695 4.79979 11.5388C4.09313 11.5209 3.4312 11.3241 2.84978 11.0021C2.84978 11.02 2.84978 11.0379 2.84978 11.0558C2.84978 13.1489 4.33465 14.8842 6.31149 15.2868C5.95369 15.3852 5.56906 15.4388 5.17548 15.4388C4.89818 15.4388 4.62983 15.412 4.36148 15.3583C4.90713 17.0758 6.49934 18.3191 8.38674 18.3549C6.91081 19.5088 5.05025 20.1976 3.02868 20.1976C2.67982 20.1976 2.33991 20.1797 2 20.135C3.8874 21.3694 6.15943 22.085 8.59247 22.085Z"></path>
-        </g>
-      </symbol>
-      <symbol id="instagram" viewBox="0 0 24 24">
-        <g>
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.465 1.066C8.638 1.012 9.012 1 12 1C14.988 1 15.362 1.013 16.534 1.066C17.706 1.119 18.506 1.306 19.206 1.577C19.939 1.854 20.604 2.287 21.154 2.847C21.714 3.396 22.146 4.06 22.422 4.794C22.694 5.494 22.88 6.294 22.934 7.464C22.988 8.639 23 9.013 23 12C23 14.988 22.987 15.362 22.934 16.535C22.881 17.705 22.694 18.505 22.422 19.205C22.146 19.9391 21.7133 20.6042 21.154 21.154C20.604 21.714 19.939 22.146 19.206 22.422C18.506 22.694 17.706 22.88 16.536 22.934C15.362 22.988 14.988 23 12 23C9.012 23 8.638 22.987 7.465 22.934C6.295 22.881 5.495 22.694 4.795 22.422C4.06092 22.146 3.39582 21.7133 2.846 21.154C2.28638 20.6047 1.85331 19.9399 1.577 19.206C1.306 18.506 1.12 17.706 1.066 16.536C1.012 15.361 1 14.987 1 12C1 9.012 1.013 8.638 1.066 7.466C1.119 6.294 1.306 5.494 1.577 4.794C1.85372 4.06008 2.28712 3.39531 2.847 2.846C3.39604 2.2865 4.06047 1.85344 4.794 1.577C5.494 1.306 6.294 1.12 7.464 1.066H7.465ZM16.445 3.046C15.285 2.993 14.937 2.982 12 2.982C9.063 2.982 8.715 2.993 7.555 3.046C6.482 3.095 5.9 3.274 5.512 3.425C4.999 3.625 4.632 3.862 4.247 4.247C3.88205 4.60205 3.60118 5.03428 3.425 5.512C3.274 5.9 3.095 6.482 3.046 7.555C2.993 8.715 2.982 9.063 2.982 12C2.982 14.937 2.993 15.285 3.046 16.445C3.095 17.518 3.274 18.1 3.425 18.488C3.601 18.965 3.882 19.398 4.247 19.753C4.602 20.118 5.035 20.399 5.512 20.575C5.9 20.726 6.482 20.905 7.555 20.954C8.715 21.007 9.062 21.018 12 21.018C14.938 21.018 15.285 21.007 16.445 20.954C17.518 20.905 18.1 20.726 18.488 20.575C19.001 20.375 19.368 20.138 19.753 19.753C20.118 19.398 20.399 18.965 20.575 18.488C20.726 18.1 20.905 17.518 20.954 16.445C21.007 15.285 21.018 14.937 21.018 12C21.018 9.063 21.007 8.715 20.954 7.555C20.905 6.482 20.726 5.9 20.575 5.512C20.375 4.999 20.138 4.632 19.753 4.247C19.3979 3.88207 18.9657 3.60121 18.488 3.425C18.1 3.274 17.518 3.095 16.445 3.046ZM10.595 15.391C11.3797 15.7176 12.2534 15.7617 13.0669 15.5157C13.8805 15.2697 14.5834 14.7489 15.0556 14.0422C15.5278 13.3356 15.7401 12.4869 15.656 11.6411C15.572 10.7953 15.197 10.005 14.595 9.405C14.2112 9.02148 13.7472 8.72781 13.2363 8.54515C12.7255 8.36248 12.1804 8.29536 11.6405 8.34862C11.1006 8.40187 10.5792 8.57418 10.1138 8.85313C9.64845 9.13208 9.25074 9.51074 8.9493 9.96185C8.64786 10.413 8.45019 10.9253 8.37052 11.462C8.29084 11.9986 8.33115 12.5463 8.48854 13.0655C8.64593 13.5847 8.91648 14.0626 9.28072 14.4647C9.64496 14.8668 10.0938 15.1832 10.595 15.391ZM8.002 8.002C8.52702 7.47697 9.15032 7.0605 9.8363 6.77636C10.5223 6.49222 11.2575 6.34597 12 6.34597C12.7425 6.34597 13.4777 6.49222 14.1637 6.77636C14.8497 7.0605 15.473 7.47697 15.998 8.002C16.523 8.52702 16.9395 9.15032 17.2236 9.8363C17.5078 10.5223 17.654 11.2575 17.654 12C17.654 12.7425 17.5078 13.4777 17.2236 14.1637C16.9395 14.8497 16.523 15.473 15.998 15.998C14.9377 17.0583 13.4995 17.654 12 17.654C10.5005 17.654 9.06234 17.0583 8.002 15.998C6.94166 14.9377 6.34597 13.4995 6.34597 12C6.34597 10.5005 6.94166 9.06234 8.002 8.002ZM18.908 7.188C19.0381 7.06527 19.1423 6.91768 19.2143 6.75397C19.2863 6.59027 19.3248 6.41377 19.3274 6.23493C19.33 6.05609 19.2967 5.87855 19.2295 5.71281C19.1622 5.54707 19.0624 5.39651 18.936 5.27004C18.8095 5.14357 18.6589 5.04376 18.4932 4.97652C18.3275 4.90928 18.1499 4.87598 17.9711 4.87858C17.7922 4.88119 17.6157 4.91965 17.452 4.9917C17.2883 5.06374 17.1407 5.1679 17.018 5.298C16.7793 5.55103 16.6486 5.88712 16.6537 6.23493C16.6588 6.58274 16.7992 6.91488 17.0452 7.16084C17.2911 7.40681 17.6233 7.54723 17.9711 7.5523C18.3189 7.55737 18.655 7.42669 18.908 7.188Z"></path>
-        </g>
-      </symbol>
-      <symbol id="key" viewBox="0 0 80 80">
-        <g>
-          <path d="M75.0804 17.5274L60.7723 3.16358C56.5542 -1.05453 51.4813 -1.05453 47.2818 3.16358L25.7825 24.7001C24.4021 26.0772 24.3997 28.3126 25.7769 29.693C25.7787 29.6949 25.7806 29.6968 25.7825 29.6986L30.6138 34.5299L24.9091 40.1788C24.3656 40.7231 24.3656 41.6043 24.9091 42.1485L26.3585 43.5979L2.20195 67.7545C1.94506 68.0109 1.79826 68.3577 1.79315 68.7207L1.75598 78.5878C1.74576 79.3573 2.36129 79.9895 3.13082 79.9998C3.13709 79.9998 3.14336 79.9998 3.14963 79.9998V79.9626H10.9541C11.3236 79.9624 11.6778 79.8153 11.9389 79.5538L16.3242 75.1684C16.5767 74.9164 16.7231 74.5773 16.733 74.2208L16.8631 69.7425L20.5795 70.2071C21.003 70.2603 21.4275 70.1165 21.7316 69.8168L24.5003 67.0481C24.7321 66.8198 24.8768 66.5174 24.9091 66.1934L25.2993 62.1611L30.1678 61.0833C30.7197 60.9644 31.1452 60.524 31.2456 59.9684L32.2118 54.5982L37.4148 53.7806C37.7033 53.7337 37.9699 53.5971 38.1766 53.3904L43.8627 47.7043L48.694 52.5356C50.0712 53.916 52.3066 53.9184 53.687 52.5412C53.6889 52.5393 53.6907 52.5375 53.6926 52.5356L75.0804 31.0177C79.2985 26.7998 79.2985 21.727 75.0804 17.5274ZM36.5043 51.1236L30.781 52.0341C30.1948 52.128 29.7323 52.583 29.6289 53.1676L28.6255 58.5378L23.6827 59.6342C23.0964 59.7677 22.6621 60.262 22.6049 60.8606L22.159 65.4132L20.3008 67.2713L15.6181 66.7696C14.8539 66.677 14.1594 67.2209 14.0665 67.9851C14.0617 68.0258 14.0584 68.0667 14.057 68.1075L13.9084 73.5706L10.322 77.157H4.46872L4.6917 69.2968L29.3314 44.5828C29.8749 44.0386 29.8749 43.1573 29.3314 42.6131L27.882 41.1637L32.5832 36.4625L41.8742 45.7534L36.5043 51.1236ZM73.2222 29.0483L51.6671 50.529C51.3791 50.8214 50.9085 50.8252 50.6161 50.5371C50.6133 50.5346 50.6108 50.5318 50.608 50.529L44.7918 44.7314L33.6426 33.5823L27.8265 27.7661C27.4783 27.5487 27.3724 27.0902 27.5898 26.742C27.6335 26.6723 27.6883 26.6101 27.7522 26.5583L49.2515 5.13327C50.4523 3.73799 52.1702 2.89251 54.0085 2.79194C55.8527 2.90947 57.576 3.751 58.8026 5.13327L73.2222 19.4971C75.3963 21.6712 77.1616 25.0717 73.2222 29.0483Z" stroke="currentColor" stroke-width="0.713663"></path>
-          <path d="M67.1783 24.175C67.156 24.151 67.1328 24.1278 67.1089 24.1055L54.1944 11.1911C53.6697 10.628 52.7878 10.5969 52.2247 11.1216C51.6617 11.6463 51.6306 12.5283 52.1553 13.0913C52.1776 13.1152 52.2008 13.1384 52.2247 13.1607L65.1392 26.0752C65.6639 26.6382 66.5459 26.6694 67.1089 26.1447C67.6719 25.62 67.703 24.7382 67.1783 24.175Z"></path>
-        </g>
-      </symbol>
-      <symbol id="search" viewBox="0 0 80 80">
-        <g>
-          <mask id="path-1-inside-1_26_59" fill="white">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 32.5C0 50.42 14.58 65 32.5 65C40.2621 65 47.3976 62.2644 52.993 57.7068L74.3094 79.0233C74.9594 79.6733 75.8128 79.9999 76.6661 79.9999C77.5194 79.9999 78.3728 79.6733 79.0228 79.0233C80.3261 77.7199 80.3261 75.6133 79.0228 74.3099L57.7064 52.9935C62.2643 47.3981 65 40.2624 65 32.5C65 14.58 50.42 0 32.5 0C14.58 0 0 14.58 0 32.5ZM6.66667 32.5C6.66667 18.2567 18.2567 6.66667 32.5 6.66667C46.7433 6.66667 58.3333 18.2567 58.3333 32.5C58.3333 46.7433 46.7433 58.3333 32.5 58.3333C18.2567 58.3333 6.66667 46.7433 6.66667 32.5Z"></path>
-          </mask>
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 32.5C0 50.42 14.58 65 32.5 65C40.2621 65 47.3976 62.2644 52.993 57.7068L74.3094 79.0233C74.9594 79.6733 75.8128 79.9999 76.6661 79.9999C77.5194 79.9999 78.3728 79.6733 79.0228 79.0233C80.3261 77.7199 80.3261 75.6133 79.0228 74.3099L57.7064 52.9935C62.2643 47.3981 65 40.2624 65 32.5C65 14.58 50.42 0 32.5 0C14.58 0 0 14.58 0 32.5ZM6.66667 32.5C6.66667 18.2567 18.2567 6.66667 32.5 6.66667C46.7433 6.66667 58.3333 18.2567 58.3333 32.5C58.3333 46.7433 46.7433 58.3333 32.5 58.3333C18.2567 58.3333 6.66667 46.7433 6.66667 32.5Z"></path>
-          <path d="M52.993 57.7068L53.5337 57.1661L53.0454 56.6779L52.5101 57.114L52.993 57.7068ZM79.0228 79.0233L79.5635 79.564L79.5635 79.5639L79.0228 79.0233ZM79.0228 74.3099L79.5635 73.7692L79.5635 73.7692L79.0228 74.3099ZM57.7064 52.9935L57.1135 52.5106L56.6774 53.046L57.1657 53.5342L57.7064 52.9935ZM32.5 64.2354C15.0023 64.2354 0.764639 49.9977 0.764639 32.5H-0.764639C-0.764639 50.8423 14.1577 65.7646 32.5 65.7646V64.2354ZM52.5101 57.114C47.0457 61.5649 40.0793 64.2354 32.5 64.2354V65.7646C40.445 65.7646 47.7496 62.964 53.4759 58.2997L52.5101 57.114ZM74.8501 78.4826L53.5337 57.1661L52.4523 58.2475L73.7688 79.564L74.8501 78.4826ZM76.6661 79.2353C76.0078 79.2353 75.3513 78.9838 74.8501 78.4826L73.7688 79.564C74.5676 80.3628 75.6178 80.7646 76.6661 80.7646V79.2353ZM78.4821 78.4826C77.9809 78.9838 77.3245 79.2353 76.6661 79.2353V80.7646C77.7144 80.7646 78.7646 80.3628 79.5635 79.564L78.4821 78.4826ZM78.4821 74.8506C79.4868 75.8553 79.4868 77.4779 78.4821 78.4826L79.5635 79.5639C81.1654 77.962 81.1654 75.3712 79.5635 73.7692L78.4821 74.8506ZM57.1657 53.5342L78.4821 74.8506L79.5635 73.7692L58.247 52.4528L57.1657 53.5342ZM64.2354 32.5C64.2354 40.0796 61.5647 47.0462 57.1135 52.5106L58.2992 53.4764C62.9638 47.75 65.7646 40.4452 65.7646 32.5H64.2354ZM32.5 0.764639C49.9977 0.764639 64.2354 15.0023 64.2354 32.5H65.7646C65.7646 14.1577 50.8423 -0.764639 32.5 -0.764639V0.764639ZM0.764639 32.5C0.764639 15.0023 15.0023 0.764639 32.5 0.764639V-0.764639C14.1577 -0.764639 -0.764639 14.1577 -0.764639 32.5H0.764639ZM32.5 5.90203C17.8344 5.90203 5.90203 17.8344 5.90203 32.5H7.43131C7.43131 18.679 18.679 7.43131 32.5 7.43131V5.90203ZM59.098 32.5C59.098 17.8344 47.1656 5.90203 32.5 5.90203V7.43131C46.321 7.43131 57.5687 18.679 57.5687 32.5H59.098ZM32.5 59.098C47.1656 59.098 59.098 47.1656 59.098 32.5H57.5687C57.5687 46.321 46.321 57.5687 32.5 57.5687V59.098ZM5.90203 32.5C5.90203 47.1656 17.8344 59.098 32.5 59.098V57.5687C18.679 57.5687 7.43131 46.321 7.43131 32.5H5.90203Z" mask="url(#path-1-inside-1_26_59)"></path>
-        </g>
-      </symbol>
-      <symbol id="verified" viewBox="0 0 80 80">
-        <g>
-          <path d="M68.2842 11.7156C60.7292 4.16078 50.6844 0 40 0C29.3155 0 19.2705 4.16078 11.7156 11.7156C4.16063 19.2706 0 29.3156 0 40C0 50.6844 4.16063 60.7292 11.7156 68.2842C19.2706 75.8392 29.3155 80 40 80C50.6844 80 60.7292 75.8392 68.2842 68.2842C75.8392 60.7292 80 50.6844 80 40C80 29.3156 75.8392 19.2708 68.2842 11.7156ZM40 75.3125C20.5286 75.3125 4.6875 59.4714 4.6875 40C4.6875 20.5286 20.5286 4.6875 40 4.6875C59.4714 4.6875 75.3125 20.5286 75.3125 40C75.3125 59.4714 59.4714 75.3125 40 75.3125Z"></path>
-          <path d="M59.1111 27.1013C58.1959 26.1863 56.7118 26.1863 55.7967 27.1014L35.1 47.7981L24.2051 36.9033C23.29 35.9881 21.8059 35.9881 20.8906 36.9033C19.9753 37.8185 19.9753 39.3025 20.8906 40.2178L33.4426 52.7699C33.9003 53.2275 34.5001 53.4563 35.0998 53.4563C35.6995 53.4563 36.2995 53.2274 36.757 52.7699L59.1111 30.4158C60.0264 29.5006 60.0264 28.0166 59.1111 27.1013Z"></path>
-        </g>
-      </symbol>
-      <symbol id="logo" viewBox="0 0 139 33">
-        <g>
-          <path d="M9.46211 24L6.06545 18.0007H4.60975V24H1.52188V8.60477H7.3006C8.49164 8.60477 9.50622 8.81798 10.3444 9.2444C11.1825 9.65612 11.8074 10.2222 12.2191 10.9427C12.6456 11.6485 12.8588 12.4426 12.8588 13.3248C12.8588 14.3394 12.5647 15.2584 11.9765 16.0818C11.3884 16.8906 10.5135 17.4493 9.35183 17.7581L13.0352 24H9.46211ZM4.60975 15.6848H7.19032C8.02846 15.6848 8.65338 15.4863 9.0651 15.0893C9.47681 14.6776 9.68267 14.1115 9.68267 13.391C9.68267 12.6852 9.47681 12.1411 9.0651 11.7588C8.65338 11.3618 8.02846 11.1633 7.19032 11.1633H4.60975V15.6848ZM18.7395 11.0971V14.957H23.9227V17.4052H18.7395V21.4856H24.5844V24H15.6516V8.58272H24.5844V11.0971H18.7395ZM40.5581 24H37.4702L30.4784 13.4351V24H27.3905V8.58272H30.4784L37.4702 19.1697V8.58272H40.5581V24ZM54.0863 8.60477V11.0971H49.9838V24H46.896V11.0971H42.7935V8.60477H54.0863ZM69.1098 8.60477V24H66.022V17.4493H59.4272V24H56.3393V8.60477H59.4272V14.9349H66.022V8.60477H69.1098ZM79.2953 24.1544C77.8543 24.1544 76.5309 23.8162 75.3252 23.1398C74.1195 22.4634 73.1637 21.5297 72.4579 20.3387C71.7521 19.1329 71.3992 17.7728 71.3992 16.2583C71.3992 14.7585 71.7521 13.413 72.4579 12.222C73.1637 11.0163 74.1195 10.0752 75.3252 9.3988C76.5309 8.72241 77.8543 8.38421 79.2953 8.38421C80.751 8.38421 82.0744 8.72241 83.2654 9.3988C84.4712 10.0752 85.4196 11.0163 86.1107 12.222C86.8165 13.413 87.1694 14.7585 87.1694 16.2583C87.1694 17.7728 86.8165 19.1329 86.1107 20.3387C85.4196 21.5297 84.4712 22.4634 83.2654 23.1398C82.0597 23.8162 80.7363 24.1544 79.2953 24.1544ZM79.2953 21.3974C80.2217 21.3974 81.0377 21.1915 81.7435 20.7798C82.4493 20.3534 83.0007 19.7505 83.3978 18.9712C83.7948 18.1919 83.9933 17.2876 83.9933 16.2583C83.9933 15.229 83.7948 14.332 83.3978 13.5674C83.0007 12.7881 82.4493 12.1926 81.7435 11.7809C81.0377 11.3692 80.2217 11.1633 79.2953 11.1633C78.3689 11.1633 77.5455 11.3692 76.825 11.7809C76.1192 12.1926 75.5678 12.7881 75.1708 13.5674C74.7738 14.332 74.5753 15.229 74.5753 16.2583C74.5753 17.2876 74.7738 18.1919 75.1708 18.9712C75.5678 19.7505 76.1192 20.3534 76.825 20.7798C77.5455 21.1915 78.3689 21.3974 79.2953 21.3974ZM92.5104 8.60477V18.1331C92.5104 19.177 92.7824 19.9784 93.3265 20.5372C93.8705 21.0812 94.6352 21.3533 95.6203 21.3533C96.6202 21.3533 97.3922 21.0812 97.9362 20.5372C98.4803 19.9784 98.7523 19.177 98.7523 18.1331V8.60477H101.862V18.111C101.862 19.4197 101.576 20.5298 101.002 21.4415C100.443 22.3384 99.686 23.0148 98.7303 23.4707C97.7892 23.9265 96.7378 24.1544 95.5762 24.1544C94.4293 24.1544 93.3853 23.9265 92.4442 23.4707C91.5179 23.0148 90.7827 22.3384 90.2386 21.4415C89.6946 20.5298 89.4225 19.4197 89.4225 18.111V8.60477H92.5104ZM110.161 24.1544C109.088 24.1544 108.117 23.9706 107.25 23.603C106.397 23.2354 105.721 22.706 105.221 22.0149C104.721 21.3238 104.463 20.5078 104.449 19.5667H107.757C107.801 20.199 108.022 20.6989 108.419 21.0665C108.831 21.4341 109.389 21.6179 110.095 21.6179C110.816 21.6179 111.382 21.4488 111.793 21.1106C112.205 20.7577 112.411 20.3019 112.411 19.7432C112.411 19.2873 112.271 18.9124 111.992 18.6183C111.713 18.3242 111.36 18.0963 110.933 17.9345C110.521 17.7581 109.948 17.5669 109.213 17.3611C108.213 17.067 107.397 16.7803 106.765 16.5009C106.147 16.2068 105.61 15.773 105.154 15.1996C104.713 14.6114 104.493 13.8321 104.493 12.8616C104.493 11.95 104.721 11.1559 105.177 10.4795C105.632 9.80316 106.272 9.28852 107.095 8.93562C107.919 8.56801 108.86 8.38421 109.919 8.38421C111.507 8.38421 112.793 8.77387 113.778 9.55319C114.778 10.3178 115.33 11.3912 115.433 12.7734H112.036C112.007 12.244 111.779 11.8103 111.352 11.4721C110.941 11.1192 110.389 10.9427 109.698 10.9427C109.095 10.9427 108.61 11.0971 108.242 11.4059C107.889 11.7147 107.713 12.1632 107.713 12.7513C107.713 13.1631 107.845 13.5086 108.11 13.788C108.389 14.0527 108.728 14.2732 109.125 14.4497C109.536 14.6114 110.11 14.8026 110.845 15.0231C111.845 15.3172 112.661 15.6113 113.293 15.9054C113.925 16.1995 114.47 16.6406 114.925 17.2287C115.381 17.8169 115.609 18.5889 115.609 19.5446C115.609 20.3681 115.396 21.1327 114.969 21.8385C114.543 22.5443 113.918 23.1104 113.095 23.5368C112.271 23.9485 111.293 24.1544 110.161 24.1544ZM121.374 11.0971V14.957H126.557V17.4052H121.374V21.4856H127.219V24H118.286V8.58272H127.219V11.0971H121.374Z"></path>
-          <path d="M135.691 25.0249C134.742 25.0249 133.945 24.7041 133.302 24.0624C132.659 23.4208 132.337 22.6263 132.337 21.6791C132.337 20.7319 132.659 19.9374 133.302 19.2958C133.945 18.6541 134.742 18.3333 135.691 18.3333C136.61 18.3333 137.391 18.6541 138.035 19.2958C138.678 19.9374 139 20.7319 139 21.6791C139 22.6263 138.678 23.4208 138.035 24.0624C137.391 24.7041 136.61 25.0249 135.691 25.0249Z" fill="#FF2775"></path>
-        </g>
-      </symbol>
-      <symbol id="play" viewBox="0 0 42 42">
-        <g>
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M21 42C32.598 42 42 32.598 42 21C42 9.40202 32.598 0 21 0C9.40202 0 0 9.40202 0 21C0 32.598 9.40202 42 21 42ZM29.5909 23.1306C30.8636 22.3958 30.8636 20.5588 29.5909 19.824L18.8523 13.624C17.5795 12.8892 15.9886 13.8077 15.9886 15.2773V27.6772C15.9886 29.1468 17.5795 30.0654 18.8523 29.3305L29.5909 23.1306Z"></path>
-        </g>
-      </symbol>
-    </svg>
-    <div class="wrapper">
-      <header class="header" id="header">
-        <div class="header__container"><a class="header__logo logo" href="index.html"> 
-            <svg class="logo__icon">
-              <use xlink:href="#logo"></use>
-            </svg></a>
-          <nav class="header__menu menu">
-            <button class="menu__icon" type="button" aria-label="Open menu"><span></span></button>
-            <div class="menu__body">
-              <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link" href="#">Gallery</a></li>
-                <li class="menu__item"><a class="menu__link" href="#about">About Us</a></li>
-                <li class="menu__item"><a class="menu__link" href="#benefits">Benefits</a></li>
-                <li class="menu__item"><a class="menu__link" href="#properties">Properties</a></li>
-              </ul>
-            </div>
-          </nav><a class="header__link page-link" href="#questions">Consult</a>
-        </div>
-      </header>
-      <main class="page">
-        <section class="intro">
-          <div class="intro__container">
-            <div class="intro__content">
-              <h1 class="intro__title main-title">Find your Perfect Home <a class="main-title__link" href="#steps">with&nbsp;Us</a></h1>
-              <p class="intro__text">All ready set for you, just relax, and tell&nbsp;us how your dreamy house, and we&nbsp;will find for you.</p>
-              <div class="intro__row"><a class="intro__link page-link" href="#" target="_blank">Learn More</a><a class="intro__play play" href="#">
-                  <svg class="play__icon">
-                    <use xlink:href="#play"></use>
-                  </svg><span>Watch video</span></a></div>
-            </div>
-            <form class="intro__search-form search-form" action="https://my-json-server.typicode.com/typicode/demo/posts" method="POST" enctype="multipart/form-data">
-              <div class="search-form__body">
-                <div class="search-form__item">
-                  <p class="search-form__name">Location</p>
-                  <select class="search-form__variable" tabindex="10" name="Location" required="required">
-                    <option value="New York" selected>New York</option>
-                    <option value="New York">New York</option>
-                    <option value="New York">New York</option>
-                  </select>
-                </div>
-                <div class="search-form__item">
-                  <p class="search-form__name">Type</p>
-                  <select class="search-form__variable" tabindex="10" name="Type" required="required">
-                    <option value="All types" selected>All types</option>
-                    <option value="Type 1">Type 1</option>
-                    <option value="Type 2">Type 2</option>
-                  </select>
-                </div>
-                <div class="search-form__item">
-                  <p class="search-form__name">Max budget</p>
-                  <select class="search-form__variable" tabindex="10" name="Budget" required="required">
-                    <option value=" 12.000" selected>12.000 &#36;</option>
-                    <option value=" 10.000">10.000 &#36;</option>
-                    <option value=" 9.000">9.000 &#36;</option>
-                  </select>
-                </div>
-              </div>
-              <button class="search-form__btn" type="submit">Search</button>
-            </form>
-          </div><img class="intro__img" src="./img/intro/intro-bg.png" alt="Intro background">
-        </section>
-        <section class="about" id="about">
-          <div class="about__container">
-            <div class="about__inner">
-              <div class="about__header page-header">
-                <p class="about__suptitle page-suptitle">About us</p>
-                <h2 class="about__title page-title">We&nbsp;provide The Best property for you</h2>
-                <p class="about__text page-text">All ready set for you, just relax, and tell&nbsp;us how your dreamy house, and we&nbsp;will find for you.</p>
-              </div><a class="about__link page-link" href="#" target="_blank">Read more</a>
-            </div>
-          </div><img class="about__img" src="./img/about/about-bg.png" alt="About background">
-        </section>
-        <section class="benefits" id="benefits">
-          <div class="benefits__container">
-            <div class="benefits__header page-header">
-              <p class="benefits__suptitle page-suptitle">Benefits</p>
-              <h2 class="benefits__title page-title">Some benefits from&nbsp;us</h2>
-            </div>
-            <div class="benefits__inner">
-              <div class="benefits__body body-benefits">
-                <div class="body-benefits__item item-benefits">
-                  <h3 class="item-benefits__title">100&#37; Protection</h3>
-                  <p class="item-benefits__suptitle">All rescure protection for your future house.</p>
-                </div>
-                <div class="body-benefits__item item-benefits">
-                  <h3 class="item-benefits__title">Top tier house</h3>
-                  <p class="item-benefits__suptitle">We&nbsp;just provide top tier house for you.</p>
-                </div>
-                <div class="body-benefits__item item-benefits">
-                  <h3 class="item-benefits__title">Transparancy</h3>
-                  <p class="item-benefits__suptitle">Transparancy is&nbsp;always for customers.</p>
-                </div>
-              </div>
-              <div class="discover-box">
-                <h4 class="discover-box__title">Discover Place USA, New York</h4>
-                <div class="discover-box__info">
-                  <div class="discover-box__images"><img class="discover-box__img" src="./img/Discover/photo-1.jpg" alt=""><img class="discover-box__img" src="./img/Discover/photo-2.jpg" alt=""><img class="discover-box__img" src="./img/Discover/photo-3.jpg" alt=""><img class="discover-box__img" src="./img/Discover/photo-4.jpg" alt=""></div><a class="discover-box__link" href="#" target="_blank">See more</a>
-                </div>
-              </div>
-            </div>
-          </div><img class="benefits__bg" src="./img/benefits/benefits__bg.png" alt="Benefits background">
-        </section>
-        <section class="properties" id="properties">
-          <div class="properties__container">
-            <div class="properties__header page-header">
-              <p class="properties__suptitle page-suptitle">Properties</p>
-              <h2 class="properties__title page-title">Recently Best properties</h2>
-              <p class="properties__text page-text">All ready set for you, just relax, and tell&nbsp;us how your dreamy house, and we&nbsp;will find for you.</p>
-            </div>
-            <div class="properties__inner">
-              <div class="properties__item item-properties"><a class="item-properties__image _ibg" href="./"><img src="./img/Properties/photo-1.jpg" alt="Villa House"></a>
-                <div class="item-properties__info"><a class="item-properties__link" href="./">
-                    <h4 class="item-properties__title">Mirror House</h4></a>
-                  <p class="item-properties__subtitle">New York, USA</p>
-                  <div class="item-properties__footer">
-                    <p class="item-properties__price">&#36; 4.500</p>
-                    <p class="item-properties__view">View: 500</p>
-                  </div>
-                </div>
-              </div>
-              <div class="properties__item item-properties"><a class="item-properties__image _ibg" href="./"><img src="./img/Properties/photo-2.jpg" alt="White House"></a>
-                <div class="item-properties__info"><a class="item-properties__link" href="./">
-                    <h4 class="item-properties__title">White House</h4></a>
-                  <p class="item-properties__subtitle">Chicago, USA</p>
-                  <div class="item-properties__footer">
-                    <p class="item-properties__price">&#36; 2.300</p>
-                    <p class="item-properties__view">View: 420</p>
-                  </div>
-                </div>
-              </div>
-              <div class="properties__item item-properties"><a class="item-properties__image _ibg" href="./"><img src="./img/Properties/photo-3.jpg" alt="Villa"></a>
-                <div class="item-properties__info"><a class="item-properties__link" href="./">
-                    <h4 class="item-properties__title">Villa</h4></a>
-                  <p class="item-properties__subtitle">New York, USA</p>
-                  <div class="item-properties__footer">
-                    <p class="item-properties__price">&#36; 3.600</p>
-                    <p class="item-properties__view">View: 780</p>
-                  </div>
-                </div>
-              </div>
-            </div><a class="properties__link page-link" href="#" target="_blank">View more</a>
-          </div><img class="properties__bg page-img" src="./img/section-bg.jpg" alt="Section background">
-        </section>
-        <section class="steps" id="steps">
-          <div class="steps__container">
-            <div class="steps__header page-header">
-              <h2 class="steps__title page-title">3&nbsp; <span> Easy </span> steps to&nbsp;rent</h2>
-              <p class="steps__text page-text">These typical steps for rent house of&nbsp;your dream.</p>
-            </div>
-            <div class="steps__inner">
-              <div class="steps__column">
-                <article class="steps__item item-steps">
-                  <svg class="item-steps__icon">
-                    <use xlink:href="#search"></use>
-                  </svg>
-                  <h4 class="item-steps__title">Find</h4>
-                  <p class="item-steps__info">Search your dreaming house</p>
-                </article>
-              </div>
-              <div class="steps__column">
-                <article class="steps__item item-steps">
-                  <svg class="item-steps__icon">
-                    <use xlink:href="#key"></use>
-                  </svg>
-                  <h4 class="item-steps__title">Rent</h4>
-                  <p class="item-steps__info">Rent a&nbsp;house that choose and like</p>
-                </article>
-              </div>
-              <div class="steps__column">
-                <article class="steps__item item-steps">
-                  <svg class="item-steps__icon">
-                    <use xlink:href="#verified"></use>
-                  </svg>
-                  <h4 class="item-steps__title">Apply</h4>
-                  <p class="item-steps__info">Come to&nbsp;the house than you have rent</p>
-                </article>
-              </div>
-            </div>
-          </div><img class="steps__bg page-img" src="./img/section-bg.jpg" alt="Steps background">
-        </section>
-        <section class="questions" id="questions">
-          <div class="questions__container">
-            <div class="questions__content">
-              <div class="questions__header section-header">
-                <h2 class="questions__title page-title">Have a&nbsp;Questions?</h2>
-                <p class="questions__text page-text">You ask&nbsp;us anything about your house program and we&nbsp;will acompany with your house in&nbsp;future.</p>
-              </div>
-              <form class="questions__consult-form consult-form" action="https://jsonplaceholder.typicode.com/posts" method="POST" enctype="multipart/form-data" novalidate>
-                <div class="consult-form__input-box">
-                  <div class="consult-form__field">
-                    <input class="consult-form__input" type="text" id="name" name="username" value="" placeholder="Darth Vader" required>
-                    <div class="consult-form__field-message"></div>
-                    <label class="consult-form__label" for="name">Name</label>
-                  </div>
-                  <div class="consult-form__field">
-                    <input class="consult-form__input" type="email" id="email" name="email" value="" placeholder="BlackCat@gmail.cat" required>
-                    <div class="consult-form__field-message"></div>
-                    <label class="consult-form__label" for="email">E-mail</label>
-                  </div>
-                </div>
-                <div class="consult-form__field">
-                  <textarea class="consult-form__textarea" name="text" value="" placeholder="What is your cat's name?"></textarea>
-                  <label class="consult-form__label form__label_textarea" for="question">Your question</label>
-                </div>
-                <button class="consult-form__btn page-link" type="submit">Consult</button>
-              </form>
-            </div>
-            <div class="questions__spoiler spoiler">
-              <div class="spoiler__item">
-                <button class="spoiler__title" type="button" aria-label="Open accordion">How to&nbsp;get Started with&nbsp;Us?</button>
-                <div class="spoiler__content">
-                  <p>You can started with&nbsp;Us every time.</p>
-                  <p>We&nbsp;online every day.</p>
-                </div>
-              </div>
-              <div class="spoiler__item">
-                <button class="spoiler__title" type="button" aria-label="Open accordion">Can I&nbsp;choose my&nbsp;own House?</button>
-                <div class="spoiler__content">
-                  <p>You can started with&nbsp;Us every time.</p>
-                  <p>We&nbsp;online every day.</p>
-                </div>
-              </div>
-              <div class="spoiler__item">
-                <button class="spoiler__title" type="button" aria-label="Open accordion">When I&nbsp;can use for House?</button>
-                <div class="spoiler__content">
-                  <p>You can started with&nbsp;Us every time.</p>
-                  <p>We&nbsp;online every day.</p>
-                </div>
-              </div>
-            </div>
-          </div><img class="questions__bg page-img" src="./img/section-bg.jpg" alt="Questions background">
-        </section>
-      </main>
-      <footer class="footer" id="footer">
-        <div class="footer__container">
-          <div class="footer__block"><a class="footer__logo logo" href="/">
-              <svg class="logo__icon">
-                <use xlink:href="#logo"></use>
-              </svg></a>
-            <div class="footer__social social"><a class="social__item" href="#" target="_blank">
-                <svg class="social__icon">
-                  <use xlink:href="#facebook"></use>
-                </svg></a><a class="social__item" href="#" target="_blank">
-                <svg class="social__icon">
-                  <use xlink:href="#twitter"></use>
-                </svg></a><a class="social__item" href="#" target="_blank">
-                <svg class="social__icon">
-                  <use xlink:href="#instagram"></use>
-                </svg></a></div>
-          </div>
-          <ul class="footer__list">
-            <h4 class="footer__title">More</h4>
-            <li><a class="footer__link" href="./" target="_blank">FAQ</a></li>
-            <li><a class="footer__link" href="./" target="_blank">Contact Us</a></li>
-          </ul>
-          <ul class="footer__list">
-            <h4 class="footer__title">Service</h4>
-            <li><a class="footer__link" href="#questions">Consultant</a></li>
-            <li><a class="footer__link" href="./">Houses</a></li>
-            <li><a class="footer__link" href="./">Selections</a></li>
-            <li><a class="footer__link" href="./">Gallery</a></li>
-          </ul>
-          <ul class="footer__list">
-            <h4 class="footer__title">Company</h4>
-            <li><a class="footer__link" href="./#about">About Us</a></li>
-            <li><a class="footer__link" href="./" target="_blank">Terms</a></li>
-            <li><a class="footer__link" href="./" target="_blank">Privacy Policy</a></li>
-            <li><a class="footer__link" href="./#properties">Properties</a></li>
-          </ul>
-        </div>
-        <div class="footer__copy">Renthouse &copy;&nbsp;2021. All rights reserved</div>
-      </footer>
-    </div>
-    <script src="js/app.js"></script>
-  </body>
+
+<head></head>
+
+<head></head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+<meta name="theme-color" content="#111111">
+<link rel="shortcut icon" href="./img/favicon.ico">
+<link rel="stylesheet" href="./css/normalize.css">
+<link rel="stylesheet" href="./css/style.css?_v=20220722201336">
+<title>Renthouse </title>
+
+<body style="background-color: #fff;">
+	<svg style="display: none;">
+		<symbol id="facebook" viewBox="0 0 24 24">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M0 12.067C0 18.033 4.333 22.994 10 24V15.333H7V12H10V9.333C10 6.333 11.933 4.667 14.667 4.667C15.533 4.667 16.467 4.8 17.333 4.933V8H15.8C14.333 8 14 8.733 14 9.667V12H17.2L16.667 15.333H14V24C19.667 22.994 24 18.034 24 12.067C24 5.43 18.6 0 12 0C5.4 0 0 5.43 0 12.067Z">
+				</path>
+			</g>
+		</symbol>
+		<symbol id="twitter" viewBox="0 0 24 24">
+			<g>
+				<path
+					d="M8.59247 22.085C16.5267 22.085 20.865 15.5104 20.865 9.81241C20.865 9.62457 20.865 9.43672 20.8561 9.25782C21.6969 8.64956 22.4304 7.88924 23.0118 7.02157C22.2426 7.36148 21.4107 7.59405 20.5341 7.70139C21.4286 7.16469 22.1084 6.32386 22.4304 5.31308C21.5985 5.80505 20.6772 6.16285 19.6932 6.35964C18.9061 5.51881 17.7879 5 16.5446 5C14.1652 5 12.2331 6.93212 12.2331 9.31149C12.2331 9.6514 12.2689 9.98237 12.3494 10.2954C8.76243 10.1165 5.58695 8.3991 3.45804 5.78716C3.09129 6.42226 2.87661 7.16469 2.87661 7.95185C2.87661 9.44567 3.63694 10.7695 4.79979 11.5388C4.09313 11.5209 3.4312 11.3241 2.84978 11.0021C2.84978 11.02 2.84978 11.0379 2.84978 11.0558C2.84978 13.1489 4.33465 14.8842 6.31149 15.2868C5.95369 15.3852 5.56906 15.4388 5.17548 15.4388C4.89818 15.4388 4.62983 15.412 4.36148 15.3583C4.90713 17.0758 6.49934 18.3191 8.38674 18.3549C6.91081 19.5088 5.05025 20.1976 3.02868 20.1976C2.67982 20.1976 2.33991 20.1797 2 20.135C3.8874 21.3694 6.15943 22.085 8.59247 22.085Z">
+				</path>
+			</g>
+		</symbol>
+		<symbol id="instagram" viewBox="0 0 24 24">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M7.465 1.066C8.638 1.012 9.012 1 12 1C14.988 1 15.362 1.013 16.534 1.066C17.706 1.119 18.506 1.306 19.206 1.577C19.939 1.854 20.604 2.287 21.154 2.847C21.714 3.396 22.146 4.06 22.422 4.794C22.694 5.494 22.88 6.294 22.934 7.464C22.988 8.639 23 9.013 23 12C23 14.988 22.987 15.362 22.934 16.535C22.881 17.705 22.694 18.505 22.422 19.205C22.146 19.9391 21.7133 20.6042 21.154 21.154C20.604 21.714 19.939 22.146 19.206 22.422C18.506 22.694 17.706 22.88 16.536 22.934C15.362 22.988 14.988 23 12 23C9.012 23 8.638 22.987 7.465 22.934C6.295 22.881 5.495 22.694 4.795 22.422C4.06092 22.146 3.39582 21.7133 2.846 21.154C2.28638 20.6047 1.85331 19.9399 1.577 19.206C1.306 18.506 1.12 17.706 1.066 16.536C1.012 15.361 1 14.987 1 12C1 9.012 1.013 8.638 1.066 7.466C1.119 6.294 1.306 5.494 1.577 4.794C1.85372 4.06008 2.28712 3.39531 2.847 2.846C3.39604 2.2865 4.06047 1.85344 4.794 1.577C5.494 1.306 6.294 1.12 7.464 1.066H7.465ZM16.445 3.046C15.285 2.993 14.937 2.982 12 2.982C9.063 2.982 8.715 2.993 7.555 3.046C6.482 3.095 5.9 3.274 5.512 3.425C4.999 3.625 4.632 3.862 4.247 4.247C3.88205 4.60205 3.60118 5.03428 3.425 5.512C3.274 5.9 3.095 6.482 3.046 7.555C2.993 8.715 2.982 9.063 2.982 12C2.982 14.937 2.993 15.285 3.046 16.445C3.095 17.518 3.274 18.1 3.425 18.488C3.601 18.965 3.882 19.398 4.247 19.753C4.602 20.118 5.035 20.399 5.512 20.575C5.9 20.726 6.482 20.905 7.555 20.954C8.715 21.007 9.062 21.018 12 21.018C14.938 21.018 15.285 21.007 16.445 20.954C17.518 20.905 18.1 20.726 18.488 20.575C19.001 20.375 19.368 20.138 19.753 19.753C20.118 19.398 20.399 18.965 20.575 18.488C20.726 18.1 20.905 17.518 20.954 16.445C21.007 15.285 21.018 14.937 21.018 12C21.018 9.063 21.007 8.715 20.954 7.555C20.905 6.482 20.726 5.9 20.575 5.512C20.375 4.999 20.138 4.632 19.753 4.247C19.3979 3.88207 18.9657 3.60121 18.488 3.425C18.1 3.274 17.518 3.095 16.445 3.046ZM10.595 15.391C11.3797 15.7176 12.2534 15.7617 13.0669 15.5157C13.8805 15.2697 14.5834 14.7489 15.0556 14.0422C15.5278 13.3356 15.7401 12.4869 15.656 11.6411C15.572 10.7953 15.197 10.005 14.595 9.405C14.2112 9.02148 13.7472 8.72781 13.2363 8.54515C12.7255 8.36248 12.1804 8.29536 11.6405 8.34862C11.1006 8.40187 10.5792 8.57418 10.1138 8.85313C9.64845 9.13208 9.25074 9.51074 8.9493 9.96185C8.64786 10.413 8.45019 10.9253 8.37052 11.462C8.29084 11.9986 8.33115 12.5463 8.48854 13.0655C8.64593 13.5847 8.91648 14.0626 9.28072 14.4647C9.64496 14.8668 10.0938 15.1832 10.595 15.391ZM8.002 8.002C8.52702 7.47697 9.15032 7.0605 9.8363 6.77636C10.5223 6.49222 11.2575 6.34597 12 6.34597C12.7425 6.34597 13.4777 6.49222 14.1637 6.77636C14.8497 7.0605 15.473 7.47697 15.998 8.002C16.523 8.52702 16.9395 9.15032 17.2236 9.8363C17.5078 10.5223 17.654 11.2575 17.654 12C17.654 12.7425 17.5078 13.4777 17.2236 14.1637C16.9395 14.8497 16.523 15.473 15.998 15.998C14.9377 17.0583 13.4995 17.654 12 17.654C10.5005 17.654 9.06234 17.0583 8.002 15.998C6.94166 14.9377 6.34597 13.4995 6.34597 12C6.34597 10.5005 6.94166 9.06234 8.002 8.002ZM18.908 7.188C19.0381 7.06527 19.1423 6.91768 19.2143 6.75397C19.2863 6.59027 19.3248 6.41377 19.3274 6.23493C19.33 6.05609 19.2967 5.87855 19.2295 5.71281C19.1622 5.54707 19.0624 5.39651 18.936 5.27004C18.8095 5.14357 18.6589 5.04376 18.4932 4.97652C18.3275 4.90928 18.1499 4.87598 17.9711 4.87858C17.7922 4.88119 17.6157 4.91965 17.452 4.9917C17.2883 5.06374 17.1407 5.1679 17.018 5.298C16.7793 5.55103 16.6486 5.88712 16.6537 6.23493C16.6588 6.58274 16.7992 6.91488 17.0452 7.16084C17.2911 7.40681 17.6233 7.54723 17.9711 7.5523C18.3189 7.55737 18.655 7.42669 18.908 7.188Z">
+				</path>
+			</g>
+		</symbol>
+		<symbol id="key" viewBox="0 0 80 80">
+			<g>
+				<path
+					d="M75.0804 17.5274L60.7723 3.16358C56.5542 -1.05453 51.4813 -1.05453 47.2818 3.16358L25.7825 24.7001C24.4021 26.0772 24.3997 28.3126 25.7769 29.693C25.7787 29.6949 25.7806 29.6968 25.7825 29.6986L30.6138 34.5299L24.9091 40.1788C24.3656 40.7231 24.3656 41.6043 24.9091 42.1485L26.3585 43.5979L2.20195 67.7545C1.94506 68.0109 1.79826 68.3577 1.79315 68.7207L1.75598 78.5878C1.74576 79.3573 2.36129 79.9895 3.13082 79.9998C3.13709 79.9998 3.14336 79.9998 3.14963 79.9998V79.9626H10.9541C11.3236 79.9624 11.6778 79.8153 11.9389 79.5538L16.3242 75.1684C16.5767 74.9164 16.7231 74.5773 16.733 74.2208L16.8631 69.7425L20.5795 70.2071C21.003 70.2603 21.4275 70.1165 21.7316 69.8168L24.5003 67.0481C24.7321 66.8198 24.8768 66.5174 24.9091 66.1934L25.2993 62.1611L30.1678 61.0833C30.7197 60.9644 31.1452 60.524 31.2456 59.9684L32.2118 54.5982L37.4148 53.7806C37.7033 53.7337 37.9699 53.5971 38.1766 53.3904L43.8627 47.7043L48.694 52.5356C50.0712 53.916 52.3066 53.9184 53.687 52.5412C53.6889 52.5393 53.6907 52.5375 53.6926 52.5356L75.0804 31.0177C79.2985 26.7998 79.2985 21.727 75.0804 17.5274ZM36.5043 51.1236L30.781 52.0341C30.1948 52.128 29.7323 52.583 29.6289 53.1676L28.6255 58.5378L23.6827 59.6342C23.0964 59.7677 22.6621 60.262 22.6049 60.8606L22.159 65.4132L20.3008 67.2713L15.6181 66.7696C14.8539 66.677 14.1594 67.2209 14.0665 67.9851C14.0617 68.0258 14.0584 68.0667 14.057 68.1075L13.9084 73.5706L10.322 77.157H4.46872L4.6917 69.2968L29.3314 44.5828C29.8749 44.0386 29.8749 43.1573 29.3314 42.6131L27.882 41.1637L32.5832 36.4625L41.8742 45.7534L36.5043 51.1236ZM73.2222 29.0483L51.6671 50.529C51.3791 50.8214 50.9085 50.8252 50.6161 50.5371C50.6133 50.5346 50.6108 50.5318 50.608 50.529L44.7918 44.7314L33.6426 33.5823L27.8265 27.7661C27.4783 27.5487 27.3724 27.0902 27.5898 26.742C27.6335 26.6723 27.6883 26.6101 27.7522 26.5583L49.2515 5.13327C50.4523 3.73799 52.1702 2.89251 54.0085 2.79194C55.8527 2.90947 57.576 3.751 58.8026 5.13327L73.2222 19.4971C75.3963 21.6712 77.1616 25.0717 73.2222 29.0483Z"
+					stroke="currentColor" stroke-width="0.713663"></path>
+				<path
+					d="M67.1783 24.175C67.156 24.151 67.1328 24.1278 67.1089 24.1055L54.1944 11.1911C53.6697 10.628 52.7878 10.5969 52.2247 11.1216C51.6617 11.6463 51.6306 12.5283 52.1553 13.0913C52.1776 13.1152 52.2008 13.1384 52.2247 13.1607L65.1392 26.0752C65.6639 26.6382 66.5459 26.6694 67.1089 26.1447C67.6719 25.62 67.703 24.7382 67.1783 24.175Z">
+				</path>
+			</g>
+		</symbol>
+		<symbol id="search" viewBox="0 0 80 80">
+			<g>
+				<mask id="path-1-inside-1_26_59" fill="white">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+						d="M0 32.5C0 50.42 14.58 65 32.5 65C40.2621 65 47.3976 62.2644 52.993 57.7068L74.3094 79.0233C74.9594 79.6733 75.8128 79.9999 76.6661 79.9999C77.5194 79.9999 78.3728 79.6733 79.0228 79.0233C80.3261 77.7199 80.3261 75.6133 79.0228 74.3099L57.7064 52.9935C62.2643 47.3981 65 40.2624 65 32.5C65 14.58 50.42 0 32.5 0C14.58 0 0 14.58 0 32.5ZM6.66667 32.5C6.66667 18.2567 18.2567 6.66667 32.5 6.66667C46.7433 6.66667 58.3333 18.2567 58.3333 32.5C58.3333 46.7433 46.7433 58.3333 32.5 58.3333C18.2567 58.3333 6.66667 46.7433 6.66667 32.5Z">
+					</path>
+				</mask>
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M0 32.5C0 50.42 14.58 65 32.5 65C40.2621 65 47.3976 62.2644 52.993 57.7068L74.3094 79.0233C74.9594 79.6733 75.8128 79.9999 76.6661 79.9999C77.5194 79.9999 78.3728 79.6733 79.0228 79.0233C80.3261 77.7199 80.3261 75.6133 79.0228 74.3099L57.7064 52.9935C62.2643 47.3981 65 40.2624 65 32.5C65 14.58 50.42 0 32.5 0C14.58 0 0 14.58 0 32.5ZM6.66667 32.5C6.66667 18.2567 18.2567 6.66667 32.5 6.66667C46.7433 6.66667 58.3333 18.2567 58.3333 32.5C58.3333 46.7433 46.7433 58.3333 32.5 58.3333C18.2567 58.3333 6.66667 46.7433 6.66667 32.5Z">
+				</path>
+				<path
+					d="M52.993 57.7068L53.5337 57.1661L53.0454 56.6779L52.5101 57.114L52.993 57.7068ZM79.0228 79.0233L79.5635 79.564L79.5635 79.5639L79.0228 79.0233ZM79.0228 74.3099L79.5635 73.7692L79.5635 73.7692L79.0228 74.3099ZM57.7064 52.9935L57.1135 52.5106L56.6774 53.046L57.1657 53.5342L57.7064 52.9935ZM32.5 64.2354C15.0023 64.2354 0.764639 49.9977 0.764639 32.5H-0.764639C-0.764639 50.8423 14.1577 65.7646 32.5 65.7646V64.2354ZM52.5101 57.114C47.0457 61.5649 40.0793 64.2354 32.5 64.2354V65.7646C40.445 65.7646 47.7496 62.964 53.4759 58.2997L52.5101 57.114ZM74.8501 78.4826L53.5337 57.1661L52.4523 58.2475L73.7688 79.564L74.8501 78.4826ZM76.6661 79.2353C76.0078 79.2353 75.3513 78.9838 74.8501 78.4826L73.7688 79.564C74.5676 80.3628 75.6178 80.7646 76.6661 80.7646V79.2353ZM78.4821 78.4826C77.9809 78.9838 77.3245 79.2353 76.6661 79.2353V80.7646C77.7144 80.7646 78.7646 80.3628 79.5635 79.564L78.4821 78.4826ZM78.4821 74.8506C79.4868 75.8553 79.4868 77.4779 78.4821 78.4826L79.5635 79.5639C81.1654 77.962 81.1654 75.3712 79.5635 73.7692L78.4821 74.8506ZM57.1657 53.5342L78.4821 74.8506L79.5635 73.7692L58.247 52.4528L57.1657 53.5342ZM64.2354 32.5C64.2354 40.0796 61.5647 47.0462 57.1135 52.5106L58.2992 53.4764C62.9638 47.75 65.7646 40.4452 65.7646 32.5H64.2354ZM32.5 0.764639C49.9977 0.764639 64.2354 15.0023 64.2354 32.5H65.7646C65.7646 14.1577 50.8423 -0.764639 32.5 -0.764639V0.764639ZM0.764639 32.5C0.764639 15.0023 15.0023 0.764639 32.5 0.764639V-0.764639C14.1577 -0.764639 -0.764639 14.1577 -0.764639 32.5H0.764639ZM32.5 5.90203C17.8344 5.90203 5.90203 17.8344 5.90203 32.5H7.43131C7.43131 18.679 18.679 7.43131 32.5 7.43131V5.90203ZM59.098 32.5C59.098 17.8344 47.1656 5.90203 32.5 5.90203V7.43131C46.321 7.43131 57.5687 18.679 57.5687 32.5H59.098ZM32.5 59.098C47.1656 59.098 59.098 47.1656 59.098 32.5H57.5687C57.5687 46.321 46.321 57.5687 32.5 57.5687V59.098ZM5.90203 32.5C5.90203 47.1656 17.8344 59.098 32.5 59.098V57.5687C18.679 57.5687 7.43131 46.321 7.43131 32.5H5.90203Z"
+					mask="url(#path-1-inside-1_26_59)"></path>
+			</g>
+		</symbol>
+		<symbol id="verified" viewBox="0 0 80 80">
+			<g>
+				<path
+					d="M68.2842 11.7156C60.7292 4.16078 50.6844 0 40 0C29.3155 0 19.2705 4.16078 11.7156 11.7156C4.16063 19.2706 0 29.3156 0 40C0 50.6844 4.16063 60.7292 11.7156 68.2842C19.2706 75.8392 29.3155 80 40 80C50.6844 80 60.7292 75.8392 68.2842 68.2842C75.8392 60.7292 80 50.6844 80 40C80 29.3156 75.8392 19.2708 68.2842 11.7156ZM40 75.3125C20.5286 75.3125 4.6875 59.4714 4.6875 40C4.6875 20.5286 20.5286 4.6875 40 4.6875C59.4714 4.6875 75.3125 20.5286 75.3125 40C75.3125 59.4714 59.4714 75.3125 40 75.3125Z">
+				</path>
+				<path
+					d="M59.1111 27.1013C58.1959 26.1863 56.7118 26.1863 55.7967 27.1014L35.1 47.7981L24.2051 36.9033C23.29 35.9881 21.8059 35.9881 20.8906 36.9033C19.9753 37.8185 19.9753 39.3025 20.8906 40.2178L33.4426 52.7699C33.9003 53.2275 34.5001 53.4563 35.0998 53.4563C35.6995 53.4563 36.2995 53.2274 36.757 52.7699L59.1111 30.4158C60.0264 29.5006 60.0264 28.0166 59.1111 27.1013Z">
+				</path>
+			</g>
+		</symbol>
+		<symbol id="logo" viewBox="0 0 139 33">
+			<g>
+				<path
+					d="M9.46211 24L6.06545 18.0007H4.60975V24H1.52188V8.60477H7.3006C8.49164 8.60477 9.50622 8.81798 10.3444 9.2444C11.1825 9.65612 11.8074 10.2222 12.2191 10.9427C12.6456 11.6485 12.8588 12.4426 12.8588 13.3248C12.8588 14.3394 12.5647 15.2584 11.9765 16.0818C11.3884 16.8906 10.5135 17.4493 9.35183 17.7581L13.0352 24H9.46211ZM4.60975 15.6848H7.19032C8.02846 15.6848 8.65338 15.4863 9.0651 15.0893C9.47681 14.6776 9.68267 14.1115 9.68267 13.391C9.68267 12.6852 9.47681 12.1411 9.0651 11.7588C8.65338 11.3618 8.02846 11.1633 7.19032 11.1633H4.60975V15.6848ZM18.7395 11.0971V14.957H23.9227V17.4052H18.7395V21.4856H24.5844V24H15.6516V8.58272H24.5844V11.0971H18.7395ZM40.5581 24H37.4702L30.4784 13.4351V24H27.3905V8.58272H30.4784L37.4702 19.1697V8.58272H40.5581V24ZM54.0863 8.60477V11.0971H49.9838V24H46.896V11.0971H42.7935V8.60477H54.0863ZM69.1098 8.60477V24H66.022V17.4493H59.4272V24H56.3393V8.60477H59.4272V14.9349H66.022V8.60477H69.1098ZM79.2953 24.1544C77.8543 24.1544 76.5309 23.8162 75.3252 23.1398C74.1195 22.4634 73.1637 21.5297 72.4579 20.3387C71.7521 19.1329 71.3992 17.7728 71.3992 16.2583C71.3992 14.7585 71.7521 13.413 72.4579 12.222C73.1637 11.0163 74.1195 10.0752 75.3252 9.3988C76.5309 8.72241 77.8543 8.38421 79.2953 8.38421C80.751 8.38421 82.0744 8.72241 83.2654 9.3988C84.4712 10.0752 85.4196 11.0163 86.1107 12.222C86.8165 13.413 87.1694 14.7585 87.1694 16.2583C87.1694 17.7728 86.8165 19.1329 86.1107 20.3387C85.4196 21.5297 84.4712 22.4634 83.2654 23.1398C82.0597 23.8162 80.7363 24.1544 79.2953 24.1544ZM79.2953 21.3974C80.2217 21.3974 81.0377 21.1915 81.7435 20.7798C82.4493 20.3534 83.0007 19.7505 83.3978 18.9712C83.7948 18.1919 83.9933 17.2876 83.9933 16.2583C83.9933 15.229 83.7948 14.332 83.3978 13.5674C83.0007 12.7881 82.4493 12.1926 81.7435 11.7809C81.0377 11.3692 80.2217 11.1633 79.2953 11.1633C78.3689 11.1633 77.5455 11.3692 76.825 11.7809C76.1192 12.1926 75.5678 12.7881 75.1708 13.5674C74.7738 14.332 74.5753 15.229 74.5753 16.2583C74.5753 17.2876 74.7738 18.1919 75.1708 18.9712C75.5678 19.7505 76.1192 20.3534 76.825 20.7798C77.5455 21.1915 78.3689 21.3974 79.2953 21.3974ZM92.5104 8.60477V18.1331C92.5104 19.177 92.7824 19.9784 93.3265 20.5372C93.8705 21.0812 94.6352 21.3533 95.6203 21.3533C96.6202 21.3533 97.3922 21.0812 97.9362 20.5372C98.4803 19.9784 98.7523 19.177 98.7523 18.1331V8.60477H101.862V18.111C101.862 19.4197 101.576 20.5298 101.002 21.4415C100.443 22.3384 99.686 23.0148 98.7303 23.4707C97.7892 23.9265 96.7378 24.1544 95.5762 24.1544C94.4293 24.1544 93.3853 23.9265 92.4442 23.4707C91.5179 23.0148 90.7827 22.3384 90.2386 21.4415C89.6946 20.5298 89.4225 19.4197 89.4225 18.111V8.60477H92.5104ZM110.161 24.1544C109.088 24.1544 108.117 23.9706 107.25 23.603C106.397 23.2354 105.721 22.706 105.221 22.0149C104.721 21.3238 104.463 20.5078 104.449 19.5667H107.757C107.801 20.199 108.022 20.6989 108.419 21.0665C108.831 21.4341 109.389 21.6179 110.095 21.6179C110.816 21.6179 111.382 21.4488 111.793 21.1106C112.205 20.7577 112.411 20.3019 112.411 19.7432C112.411 19.2873 112.271 18.9124 111.992 18.6183C111.713 18.3242 111.36 18.0963 110.933 17.9345C110.521 17.7581 109.948 17.5669 109.213 17.3611C108.213 17.067 107.397 16.7803 106.765 16.5009C106.147 16.2068 105.61 15.773 105.154 15.1996C104.713 14.6114 104.493 13.8321 104.493 12.8616C104.493 11.95 104.721 11.1559 105.177 10.4795C105.632 9.80316 106.272 9.28852 107.095 8.93562C107.919 8.56801 108.86 8.38421 109.919 8.38421C111.507 8.38421 112.793 8.77387 113.778 9.55319C114.778 10.3178 115.33 11.3912 115.433 12.7734H112.036C112.007 12.244 111.779 11.8103 111.352 11.4721C110.941 11.1192 110.389 10.9427 109.698 10.9427C109.095 10.9427 108.61 11.0971 108.242 11.4059C107.889 11.7147 107.713 12.1632 107.713 12.7513C107.713 13.1631 107.845 13.5086 108.11 13.788C108.389 14.0527 108.728 14.2732 109.125 14.4497C109.536 14.6114 110.11 14.8026 110.845 15.0231C111.845 15.3172 112.661 15.6113 113.293 15.9054C113.925 16.1995 114.47 16.6406 114.925 17.2287C115.381 17.8169 115.609 18.5889 115.609 19.5446C115.609 20.3681 115.396 21.1327 114.969 21.8385C114.543 22.5443 113.918 23.1104 113.095 23.5368C112.271 23.9485 111.293 24.1544 110.161 24.1544ZM121.374 11.0971V14.957H126.557V17.4052H121.374V21.4856H127.219V24H118.286V8.58272H127.219V11.0971H121.374Z">
+				</path>
+				<path
+					d="M135.691 25.0249C134.742 25.0249 133.945 24.7041 133.302 24.0624C132.659 23.4208 132.337 22.6263 132.337 21.6791C132.337 20.7319 132.659 19.9374 133.302 19.2958C133.945 18.6541 134.742 18.3333 135.691 18.3333C136.61 18.3333 137.391 18.6541 138.035 19.2958C138.678 19.9374 139 20.7319 139 21.6791C139 22.6263 138.678 23.4208 138.035 24.0624C137.391 24.7041 136.61 25.0249 135.691 25.0249Z"
+					fill="#FF2775"></path>
+			</g>
+		</symbol>
+		<symbol id="play" viewBox="0 0 42 42">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M21 42C32.598 42 42 32.598 42 21C42 9.40202 32.598 0 21 0C9.40202 0 0 9.40202 0 21C0 32.598 9.40202 42 21 42ZM29.5909 23.1306C30.8636 22.3958 30.8636 20.5588 29.5909 19.824L18.8523 13.624C17.5795 12.8892 15.9886 13.8077 15.9886 15.2773V27.6772C15.9886 29.1468 17.5795 30.0654 18.8523 29.3305L29.5909 23.1306Z">
+				</path>
+			</g>
+		</symbol>
+	</svg>
+	<div class="wrapper">
+		<header class="header" id="header">
+			<div class="header__container"><a class="header__logo logo" href="index.html">
+					<svg class="logo__icon">
+						<use xlink:href="#logo"></use>
+					</svg></a>
+				<nav class="header__menu menu">
+					<button class="menu__icon" type="button" aria-label="Open menu"><span></span></button>
+					<div class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a class="menu__link" href="#">Gallery</a></li>
+							<li class="menu__item"><a class="menu__link" href="#about">About Us</a></li>
+							<li class="menu__item"><a class="menu__link" href="#benefits">Benefits</a></li>
+							<li class="menu__item"><a class="menu__link" href="#properties">Properties</a></li>
+						</ul>
+					</div>
+				</nav><a class="header__link page-link" href="#questions">Consult</a>
+			</div>
+		</header>
+		<main class="page">
+			<section class="intro">
+				<div class="intro__container">
+					<div class="intro__content">
+						<h1 class="intro__title main-title">Find your Perfect Home <a class="main-title__link"
+								href="#steps">with&nbsp;Us</a></h1>
+						<p class="intro__text">All ready set for you, just relax, and tell&nbsp;us how your dreamy house, and
+							we&nbsp;will find for you.</p>
+						<div class="intro__control"><a class="intro__link page-link" href="#" target="_blank">Learn More</a><a
+								class="intro__play play" href="#">
+								<svg class="play__icon">
+									<use xlink:href="#play"></use>
+								</svg><span>Watch video</span></a></div>
+					</div>
+					<form class="intro__search-form search-form" action="https://my-json-server.typicode.com/typicode/demo/posts"
+						method="POST" enctype="multipart/form-data">
+						<div class="search-form__body">
+							<div class="search-form__item">
+								<p class="search-form__name">Location</p>
+								<select class="search-form__variable" tabindex="10" name="Location" required="required">
+									<option value="New York" selected>New York</option>
+									<option value="New York">New York</option>
+									<option value="New York">New York</option>
+								</select>
+							</div>
+							<div class="search-form__item">
+								<p class="search-form__name">Type</p>
+								<select class="search-form__variable" tabindex="10" name="Type" required="required">
+									<option value="All types" selected>All types</option>
+									<option value="Type 1">Type 1</option>
+									<option value="Type 2">Type 2</option>
+								</select>
+							</div>
+							<div class="search-form__item">
+								<p class="search-form__name">Max budget</p>
+								<select class="search-form__variable" tabindex="10" name="Budget" required="required">
+									<option value=" 12.000" selected>12.000 &#36;</option>
+									<option value=" 10.000">10.000 &#36;</option>
+									<option value=" 9.000">9.000 &#36;</option>
+								</select>
+							</div>
+						</div>
+						<button class="search-form__btn" type="submit">Search</button>
+					</form>
+				</div>
+				<picture>
+					<source srcset="./img/intro/intro-bg.webp" type="image/webp"><img class="intro__img"
+						src="./img/intro/intro-bg.png" alt="Intro background">
+				</picture>
+			</section>
+			<section class="about" id="about">
+				<div class="about__container">
+					<div class="about__inner">
+						<div class="about__header page-header">
+							<p class="about__suptitle page-suptitle">About us</p>
+							<h2 class="about__title page-title">We&nbsp;provide The Best property for you</h2>
+							<p class="about__text page-text">All ready set for you, just relax, and tell&nbsp;us how your dreamy
+								house, and we&nbsp;will find for you.</p>
+						</div><a class="about__link page-link" href="#" target="_blank">Read more</a>
+					</div>
+				</div>
+				<picture>
+					<source srcset="./img/about/about-bg.webp" type="image/webp"><img class="about__img"
+						src="./img/about/about-bg.png" alt="About background">
+				</picture>
+			</section>
+			<section class="benefits" id="benefits">
+				<div class="benefits__container">
+					<div class="benefits__header page-header">
+						<p class="benefits__suptitle page-suptitle">Benefits</p>
+						<h2 class="benefits__title page-title">Some benefits from&nbsp;us</h2>
+					</div>
+					<div class="benefits__inner">
+						<div class="benefits__body">
+							<div class="body-benefits__item item-benefits">
+								<h3 class="item-benefits__title">100&#37; Protection</h3>
+								<p class="item-benefits__suptitle">All rescure protection for your future house.</p>
+							</div>
+							<div class="body-benefits__item item-benefits">
+								<h3 class="item-benefits__title">Top tier house</h3>
+								<p class="item-benefits__suptitle">We&nbsp;just provide top tier house for you.</p>
+							</div>
+							<div class="body-benefits__item item-benefits">
+								<h3 class="item-benefits__title">Transparancy</h3>
+								<p class="item-benefits__suptitle">Transparancy is&nbsp;always for customers.</p>
+							</div>
+						</div>
+						<div class="benenfits__discover-box discover-box">
+							<h4 class="discover-box__title">Discover Place USA, New York</h4>
+							<div class="discover-box__info">
+								<div class="discover-box__images">
+									<picture>
+										<source srcset="./img/Discover/photo-1.webp" type="image/webp"><img class="discover-box__img"
+											src="./img/Discover/photo-1.jpg" alt="">
+									</picture>
+									<picture>
+										<source srcset="./img/Discover/photo-2.webp" type="image/webp"><img class="discover-box__img"
+											src="./img/Discover/photo-2.jpg" alt="">
+									</picture>
+									<picture>
+										<source srcset="./img/Discover/photo-3.webp" type="image/webp"><img class="discover-box__img"
+											src="./img/Discover/photo-3.jpg" alt="">
+									</picture>
+									<picture>
+										<source srcset="./img/Discover/photo-4.webp" type="image/webp"><img class="discover-box__img"
+											src="./img/Discover/photo-4.jpg" alt="">
+									</picture>
+								</div><a class="discover-box__link" href="#" target="_blank">See more</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<picture>
+					<source srcset="./img/benefits/benefits__bg.webp" type="image/webp"><img class="benefits__bg"
+						src="./img/benefits/benefits__bg.png" alt="Benefits background">
+				</picture>
+			</section>
+			<section class="properties" id="properties">
+				<div class="properties__container">
+					<div class="properties__header page-header">
+						<p class="properties__suptitle page-suptitle">Properties</p>
+						<h2 class="properties__title page-title">Recently Best properties</h2>
+						<p class="properties__text page-text">All ready set for you, just relax, and tell&nbsp;us how your dreamy
+							house, and we&nbsp;will find for you.</p>
+					</div>
+					<div class="properties__inner">
+						<div class="properties__item item-properties"><a class="item-properties__image" href="./">
+								<picture>
+									<source srcset="./img/Properties/photo-1.webp" type="image/webp"><img
+										src="./img/Properties/photo-1.jpg" alt="Villa House">
+								</picture>
+							</a>
+							<div class="item-properties__info"><a class="item-properties__link" href="./">
+									<h4 class="item-properties__title">Mirror House</h4>
+								</a>
+								<p class="item-properties__subtitle">New York, USA</p>
+								<div class="item-properties__footer">
+									<p class="item-properties__price">&#36; 4.500</p>
+									<p class="item-properties__view">View: 500</p>
+								</div>
+							</div>
+						</div>
+						<div class="properties__item item-properties"><a class="item-properties__image" href="./">
+								<picture>
+									<source srcset="./img/Properties/photo-2.webp" type="image/webp"><img
+										src="./img/Properties/photo-2.jpg" alt="White House">
+								</picture>
+							</a>
+							<div class="item-properties__info"><a class="item-properties__link" href="./">
+									<h4 class="item-properties__title">White House</h4>
+								</a>
+								<p class="item-properties__subtitle">Chicago, USA</p>
+								<div class="item-properties__footer">
+									<p class="item-properties__price">&#36; 2.300</p>
+									<p class="item-properties__view">View: 420</p>
+								</div>
+							</div>
+						</div>
+						<div class="properties__item item-properties"><a class="item-properties__image" href="./">
+								<picture>
+									<source srcset="./img/Properties/photo-3.webp" type="image/webp"><img
+										src="./img/Properties/photo-3.jpg" alt="Villa">
+								</picture>
+							</a>
+							<div class="item-properties__info"><a class="item-properties__link" href="./">
+									<h4 class="item-properties__title">Villa</h4>
+								</a>
+								<p class="item-properties__subtitle">New York, USA</p>
+								<div class="item-properties__footer">
+									<p class="item-properties__price">&#36; 3.600</p>
+									<p class="item-properties__view">View: 780</p>
+								</div>
+							</div>
+						</div>
+					</div><a class="properties__link page-link" href="#" target="_blank">View more</a>
+				</div>
+				<picture>
+					<source srcset="./img/section-bg.webp" type="image/webp"><img class="properties__bg page-img"
+						src="./img/section-bg.jpg" alt="Section background">
+				</picture>
+			</section>
+			<section class="steps" id="steps">
+				<div class="steps__container">
+					<div class="steps__header page-header">
+						<h2 class="steps__title page-title">3&nbsp; <span> Easy </span> steps to&nbsp;rent</h2>
+						<p class="steps__text page-text">These typical steps for rent house of&nbsp;your dream.</p>
+					</div>
+					<div class="steps__inner">
+						<div class="steps__column">
+							<article class="steps__item item-steps">
+								<svg class="item-steps__icon">
+									<use xlink:href="#search"></use>
+								</svg>
+								<h4 class="item-steps__title">Find</h4>
+								<p class="item-steps__info">Search your dreaming house</p>
+							</article>
+						</div>
+						<div class="steps__column">
+							<article class="steps__item item-steps">
+								<svg class="item-steps__icon">
+									<use xlink:href="#key"></use>
+								</svg>
+								<h4 class="item-steps__title">Rent</h4>
+								<p class="item-steps__info">Rent a&nbsp;house that choose and like</p>
+							</article>
+						</div>
+						<div class="steps__column">
+							<article class="steps__item item-steps">
+								<svg class="item-steps__icon">
+									<use xlink:href="#verified"></use>
+								</svg>
+								<h4 class="item-steps__title">Apply</h4>
+								<p class="item-steps__info">Come to&nbsp;the house than you have rent</p>
+							</article>
+						</div>
+					</div>
+				</div>
+				<picture>
+					<source srcset="./img/section-bg.webp" type="image/webp"><img class="steps__bg page-img"
+						src="./img/section-bg.jpg" alt="Steps background">
+				</picture>
+			</section>
+			<section class="questions" id="questions">
+				<div class="questions__container">
+					<div class="questions__content">
+						<div class="questions__header section-header">
+							<h2 class="questions__title page-title">Have a&nbsp;Questions?</h2>
+							<p class="questions__text page-text">You ask&nbsp;us anything about your house program and we&nbsp;will
+								acompany with your house in&nbsp;future.</p>
+						</div>
+						<form class="questions__consult-form consult-form" action="https://jsonplaceholder.typicode.com/posts"
+							method="POST" enctype="multipart/form-data" novalidate>
+							<div class="consult-form__input-box">
+								<div class="consult-form__field">
+									<input class="consult-form__input" type="text" id="name" name="username" value=""
+										placeholder="Darth Vader" required>
+									<div class="consult-form__field-message"></div>
+									<label class="consult-form__label" for="name">Name</label>
+								</div>
+								<div class="consult-form__field">
+									<input class="consult-form__input" type="email" id="email" name="email" value=""
+										placeholder="BlackCat@gmail.cat" required>
+									<div class="consult-form__field-message"></div>
+									<label class="consult-form__label" for="email">E-mail</label>
+								</div>
+							</div>
+							<div class="consult-form__field">
+								<textarea class="consult-form__textarea" name="text" value=""
+									placeholder="What is your cat's name?"></textarea>
+								<label class="consult-form__label form__label_textarea" for="question">Your question</label>
+							</div>
+							<button class="consult-form__btn page-link" type="submit">Consult</button>
+						</form>
+					</div>
+					<div class="questions__spoiler spoiler">
+						<div class="spoiler__item">
+							<button class="spoiler__title" type="button" aria-label="Open accordion">How to&nbsp;get Started
+								with&nbsp;Us?</button>
+							<div class="spoiler__content">
+								<p>You can started with&nbsp;Us every time.</p>
+								<p>We&nbsp;online every day.</p>
+							</div>
+						</div>
+						<div class="spoiler__item">
+							<button class="spoiler__title" type="button" aria-label="Open accordion">Can I&nbsp;choose my&nbsp;own
+								House?</button>
+							<div class="spoiler__content">
+								<p>You can started with&nbsp;Us every time.</p>
+								<p>We&nbsp;online every day.</p>
+							</div>
+						</div>
+						<div class="spoiler__item">
+							<button class="spoiler__title" type="button" aria-label="Open accordion">When I&nbsp;can use for
+								House?</button>
+							<div class="spoiler__content">
+								<p>You can started with&nbsp;Us every time.</p>
+								<p>We&nbsp;online every day.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<picture>
+					<source srcset="./img/section-bg.webp" type="image/webp"><img class="questions__bg page-img"
+						src="./img/section-bg.jpg" alt="Questions background">
+				</picture>
+			</section>
+		</main>
+		<footer class="footer" id="footer">
+			<div class="footer__container">
+				<div class="footer__block"><a class="footer__logo logo" href="/">
+						<svg class="logo__icon">
+							<use xlink:href="#logo"></use>
+						</svg></a>
+					<div class="footer__social social"><a class="social__item" href="#" target="_blank">
+							<svg class="social__icon">
+								<use xlink:href="#facebook"></use>
+							</svg></a><a class="social__item" href="#" target="_blank">
+							<svg class="social__icon">
+								<use xlink:href="#twitter"></use>
+							</svg></a><a class="social__item" href="#" target="_blank">
+							<svg class="social__icon">
+								<use xlink:href="#instagram"></use>
+							</svg></a></div>
+				</div>
+				<div class="footer__wrapper-list">
+					<h4 class="footer__title">More</h4>
+					<ul class="footer__list">
+						<li class="footer__item"><a class="footer__link" href="./" target="_blank">FAQ</a></li>
+						<li class="footer__item"><a class="footer__link" href="./" target="_blank">Contact Us</a></li>
+					</ul>
+				</div>
+				<div class="footer__wrapper-list">
+					<h4 class="footer__title">Service</h4>
+					<ul class="footer__list">
+						<li class="footer__item"><a class="footer__link" href="#questions">Consultant</a></li>
+						<li class="footer__item"><a class="footer__link" href="./">Houses</a></li>
+						<li class="footer__item"><a class="footer__link" href="./">Selections</a></li>
+						<li class="footer__item"><a class="footer__link" href="./">Gallery</a></li>
+					</ul>
+				</div>
+				<div class="footer__wrapper-list">
+					<h4 class="footer__title">Company</h4>
+					<ul class="footer__list">
+						<li class="footer__item"><a class="footer__link" href="./#about">About Us</a></li>
+						<li class="footer__item"><a class="footer__link" href="./" target="_blank">Terms</a></li>
+						<li class="footer__item"><a class="footer__link" href="./" target="_blank">Privacy Policy</a></li>
+						<li class="footer__item"><a class="footer__link" href="./#properties">Properties</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__copy">Renthouse &copy;&nbsp;2021. All rights reserved</div>
+		</footer>
+	</div>
+	<script src="js/app.js?_v=20220722201336"></script>
+</body>
+
 </html>
