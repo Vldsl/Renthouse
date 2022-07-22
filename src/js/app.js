@@ -32,7 +32,7 @@ let lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
 	let scrollDistance = window.scrollY;
-	if (scrollDistance >= introHeight + headerHeight && scrollDistance > lastScrollTop) {
+	if (scrollDistance >= introHeight + headerHeight) {
 		header.classList.add('fixed');
 		intro.style.marginTop = `${headerHeight}px`;
 	} else {
